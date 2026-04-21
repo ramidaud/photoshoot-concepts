@@ -366,7 +366,117 @@ influence in its natural habitat.</p>
   </div>
 </div>
 
+<div class="concept-card doc">
+  <div class="concept-header">
+    <div class="concept-num">E</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Documentary / Telephoto</div>
+      <div class="concept-title">The View From Outside</div>
+    </div>
+  </div>
 
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The conceptual problem with the original prompts:</strong> A professor with a book in a classroom is a university brochure, not a Field Notes image. The research question here is about scale and transmission — how does one person's thinking reach millions of classrooms? The images should be about presence at a distance, influence without visibility.</p>
+      <p><strong>The idea:</strong> An extreme telephoto shot (400mm equivalent) through a classroom window from outside the building. A child is reading aloud at a desk; a teacher listens nearby. Rasinski is not in the image. The window glass creates a slight softening, a slight remove. The camera watches from outside a room it cannot enter — exactly the position of someone whose influence has traveled further than their body. The image is about the rooms where his work lives without him.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/5.6</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">400mm equivalent (extreme telephoto)</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Late afternoon natural light inside the classroom</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Classroom Interior (Through Window) -->
+      <rect x="220" y="20" width="180" height="160" fill="#f0f4f8" stroke="#cbd5e1" stroke-width="4"/>
+      <text class="diag-label" x="310" y="40" text-anchor="middle" fill="#3a4055">classroom interior</text>
+
+      <!-- Child & Teacher -->
+      <rect x="260" y="120" width="40" height="20" rx="2" fill="#94a3b8"/> <!-- Desk -->
+      <ellipse cx="280" cy="100" rx="10" ry="15" fill="#4cc9f0"/> <!-- Child -->
+      <ellipse cx="320" cy="90" rx="12" ry="18" fill="#1D9E75"/> <!-- Teacher leaning -->
+      <text class="diag-label" x="280" y="150" text-anchor="middle">child reading</text>
+      <text class="diag-label" x="340" y="110" text-anchor="start">teacher listening</text>
+
+      <!-- Exterior Blur / Distance -->
+      <rect x="220" y="20" width="180" height="160" fill="rgba(255,255,255,0.2)"/>
+      <line x1="200" y1="180" x2="420" y2="180" stroke="#3a4055" stroke-width="2"/>
+      
+      <!-- Camera (Far away) -->
+      <rect x="80" y="90" width="60" height="20" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="110" y="125" text-anchor="middle">camera (400mm telephoto)</text>
+      <path d="M 140 100 L 220 50 L 220 150 Z" fill="rgba(179,136,255,0.1)"/>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_e.png" alt="Concept E Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">Extreme telephoto photograph taken from outside a school building, looking through a large classroom window — inside, a child is seated at a desk reading from a book, a teacher leaning in nearby to listen. The window glass creates a slight, realistic softening of the scene. No faces are identifiable at this distance. The exterior world is blurred in the immediate foreground; the interior classroom is sharp through the glass. Late afternoon natural light inside the classroom. The camera observes from a distance that cannot be crossed. 400mm equivalent, f/5.6, natural light, photorealistic documentary photography --ar 3:2 --style raw</div>
+  </div>
+</div>
+
+<div class="concept-card posed">
+  <div class="concept-header">
+    <div class="concept-num">F</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Experimental Portrait</div>
+      <div class="concept-title">The Library at Night</div>
+    </div>
+  </div>
+
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The idea:</strong> A long-exposure deliberate double exposure. A library or reading room, shot twice from a tripod: once with Rasinski reading alone at a table under a pool of lamplight, once empty. The two exposures blended together produce a ghost — he is present and absent in the same image, solid enough to read by but transparent enough to see through. This is what legacy looks like: an impression left in a space after the person has gone.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/5.6</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">35mm</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Warm lamplight only, long-exposure double exposure</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Library Background -->
+      <rect x="180" y="20" width="260" height="160" rx="4" fill="#1a1b26" stroke="#3a4055" stroke-width="1.5"/>
+
+      <!-- Table & Lamp (Solid) -->
+      <rect x="240" y="120" width="140" height="10" rx="2" class="diag-object"/>
+      <line x1="260" y1="130" x2="260" y2="180" stroke="#fff" stroke-width="4"/>
+      <line x1="360" y1="130" x2="360" y2="180" stroke="#fff" stroke-width="4"/>
+      <text class="diag-label" x="310" y="145" text-anchor="middle">reading table</text>
+
+      <path d="M 270 90 L 290 70 L 330 70 L 350 90 Z" fill="#ffd166"/>
+      <path d="M 270 90 L 350 90 L 310 120 Z" fill="rgba(255,209,102,0.3)"/>
+      <text class="diag-label" x="310" y="60" text-anchor="middle" fill="#ffd166">lamplight</text>
+
+      <!-- Rasinski (Ghosted) -->
+      <ellipse cx="310" cy="95" rx="15" ry="20" fill="none" stroke="#4cc9f0" stroke-width="2" stroke-dasharray="2 2" opacity="0.6"/>
+      <text class="diag-label" x="310" y="165" text-anchor="middle" fill="#4cc9f0">ghosted figure (Rasinski)</text>
+
+      <!-- Camera -->
+      <rect x="290" y="185" width="40" height="15" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="220" y="192" text-anchor="end">camera (tripod, double exp.)</text>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_f.png" alt="Concept F Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">Deliberate in-camera double exposure of a library reading room: one exposure shows a senior male professor seated alone at a wooden reading table under a single warm lamplight, reading — the second exposure of the identical frame is empty, the chair and table vacant. The blended result: a ghost of a reader, half-transparent, present in a room that no longer holds him. The lamp, the table, and the books are fully sharp and solid. The human figure is a residue. Long-exposure double exposure, 35mm, f/5.6, warm lamplight only, photorealistic --ar 3:2 --style raw</div>
+  </div>
+</div>
 <!-- ══ 04 ACTION ITEMS ═════════════════════════════════════ -->
 <div class="section-label">
   <h2>Action Items</h2>

@@ -376,7 +376,125 @@ visualization as visual art. The image that stops a reader mid-scroll.</p>
   </div>
 </div>
 
+<div class="concept-card posed">
+  <div class="concept-header">
+    <div class="concept-num">E</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Documentary Portrait</div>
+      <div class="concept-title">The Science of Holding</div>
+    </div>
+  </div>
 
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The conceptual problem with the original prompts:</strong> The microscope face-glow portrait is strong but we already used that energy for the biofilm brief. The bigger idea here is that this is a story about connection — between a mother and child, between a turtle on a beach and a discovery about human attachment. The images should carry emotional warmth, not just scientific atmosphere.</p>
+      <p><strong>The idea:</strong> A mother holds a newborn or infant — photographed in near darkness with Caldwell's fluorescence neural imagery projected across both of them. The oxytocin receptor distribution patterns in green and blue flow across the mother's face, the curve of her shoulder, and the child's head. The science of bonding literally illuminating the act of bonding. Caldwell is not in this image. The research is. This is the most direct possible statement of what the work means.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/1.8</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">50mm</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Full projection light only</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Dark Studio Background -->
+      <rect x="200" y="20" width="220" height="160" rx="4" fill="#1a1b26" stroke="#3a4055" stroke-width="1.5"/>
+      <text class="diag-label" x="220" y="40" text-anchor="start" fill="#3a4055">complete darkness</text>
+
+      <!-- Projector -->
+      <rect x="100" y="70" width="30" height="20" rx="2" class="diag-object"/>
+      <text class="diag-label" x="115" y="60" text-anchor="middle">projector</text>
+      <path d="M 130 80 L 260 50 L 260 150 Z" fill="url(#grad_proj)" opacity="0.4"/>
+
+      <!-- Mother & Child -->
+      <ellipse cx="300" cy="90" rx="20" ry="30" fill="#1D9E75"/> <!-- Mother lit by projection -->
+      <ellipse cx="280" cy="100" rx="12" ry="12" fill="#4cc9f0"/> <!-- Infant lit by projection -->
+      <text class="diag-label" x="330" y="90" text-anchor="start" fill="#1D9E75">mother & infant</text>
+      <text class="diag-label" x="330" y="110" text-anchor="start" fill="#4cc9f0">(lit only by projection)</text>
+
+      <!-- Camera -->
+      <rect x="290" y="150" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="185" text-anchor="middle">camera (50mm)</text>
+
+      <defs>
+        <linearGradient id="grad_proj" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#4cc9f0" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#1D9E75" stop-opacity="0.2"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_e.png" alt="Concept E Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">A mother holds a newborn infant against her chest in complete darkness, both of them illuminated only by a large projection of fluorescence confocal microscopy imagery showing oxytocin receptor distribution in developing brain tissue — vivid green and blue neural patterns flowing across the mother's face, shoulder, and the baby's head. No other light source. The scientific imagery is the light; the bonding act is the subject. Deep shadow, high ISO grain, the colors of the projection saturated and vivid against the dark. The image reads as sacred and scientific simultaneously. Documentary portrait, 50mm, f/1.8, full projection light only, photorealistic --ar 4:5 --style raw</div>
+  </div>
+</div>
+
+<div class="concept-card doc">
+  <div class="concept-header">
+    <div class="concept-num">F</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Environmental Documentary</div>
+      <div class="concept-title">The Origin</div>
+    </div>
+  </div>
+
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The idea:</strong> A sea turtle track crossing a dark beach at low tide, the parallel lines leading from the water's edge to a nest site out of frame. Shot at blue hour — dark sky, silver water, the sand almost black. The tracks are the only subject. No turtle, no researcher, no lab. Just the trace of the animal that started a question that led, unexpectedly, to understanding human attachment. The simplest possible image that carries the origin story.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/5.6</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">35mm</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Natural blue hour light</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Sky / Water -->
+      <rect x="180" y="20" width="260" height="60" rx="4" fill="url(#grad_bluehour)"/>
+      <text class="diag-label" x="310" y="50" text-anchor="middle" fill="#4cc9f0">blue hour sky & silver water</text>
+
+      <!-- Beach / Tracks -->
+      <rect x="180" y="80" width="260" height="100" rx="4" fill="rgba(255,255,255,0.02)"/>
+      <text class="diag-label" x="220" y="100" text-anchor="middle">dark sand</text>
+      
+      <path d="M 280 180 Q 290 120 310 80" fill="none" stroke="#e36414" stroke-width="6" stroke-dasharray="10 5" opacity="0.6"/>
+      <path d="M 320 180 Q 330 120 350 80" fill="none" stroke="#e36414" stroke-width="6" stroke-dasharray="10 5" opacity="0.6"/>
+      <text class="diag-label" x="350" y="140" text-anchor="start" fill="#e36414">turtle tracks</text>
+
+      <!-- Camera -->
+      <rect x="290" y="170" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="185" text-anchor="middle">camera (low angle, 35mm)</text>
+
+      <defs>
+        <linearGradient id="grad_bluehour" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#1a1b26" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#4cc9f0" stop-opacity="0.4"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_f.png" alt="Concept F Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">Sea turtle flipper tracks crossing a dark beach at blue hour — two parallel drag marks in wet sand leading from the edge of the ocean toward the upper beach, the nest site out of frame. No turtle visible. Silver ocean water in the background, deep blue pre-dawn sky above. The tracks are the only subject. Low camera angle, nearly at sand level, the tracks receding into the frame. The image is spare, beautiful, and unexplained — it asks a question rather than answers one. Environmental documentary photography, 35mm, f/5.6, natural blue hour light, photorealistic --ar 3:2 --style raw</div>
+  </div>
+</div>
 <!-- ══ 04 ACTION ITEMS ═════════════════════════════════════ -->
 <div class="section-label">
   <h2>Action Items</h2>

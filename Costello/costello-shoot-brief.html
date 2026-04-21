@@ -386,7 +386,122 @@ as the subject of the image rather than the supporting data.</p>
   </div>
 </div>
 
+<div class="concept-card doc">
+  <div class="concept-header">
+    <div class="concept-num">E</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Documentary / Split Underwater</div>
+      <div class="concept-title">The Split World</div>
+    </div>
+  </div>
 
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The conceptual problem with the original prompts:</strong> Wading researchers and rock comparisons are the expected stream ecology images. The story's real tension is invisibility — a stream that looks perfectly healthy but is quietly starving. The images should exploit the gap between surface appearance and hidden reality.</p>
+      <p><strong>The idea:</strong> An over-under split shot using a dome port or split lens — half the frame above the water surface showing the normal Ohio creek scene (trees, sky, waders), half below showing the streambed rocks, the substrate devices, and the thin biofilm communities. The water surface is the dividing line between the world we see and the world that is sick. This is the single frame that tells the whole story: the surface looks fine. Look below and you find the evidence.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/8 (deep focus for split)</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">15mm wide (dome port)</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Overhead sun diffused by clouds</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Upper Half (Above Water) -->
+      <rect x="180" y="20" width="260" height="80" rx="4" fill="#f0f4f8"/>
+      <circle cx="220" cy="50" r="15" fill="#1D9E75" opacity="0.6"/> <!-- Trees -->
+      <circle cx="260" cy="40" r="25" fill="#1D9E75" opacity="0.5"/>
+      <circle cx="400" cy="30" r="20" fill="rgba(255,209,102,0.8)"/> <!-- Sun -->
+      <text class="diag-label" x="310" y="60" text-anchor="middle" fill="#3a4055">above water (healthy stream)</text>
+
+      <!-- Waterline -->
+      <line x1="180" y1="100" x2="440" y2="100" stroke="#4cc9f0" stroke-width="4"/>
+      <text class="diag-label" x="200" y="95" text-anchor="start" fill="#4cc9f0">waterline (dome port)</text>
+
+      <!-- Lower Half (Below Water) -->
+      <rect x="180" y="100" width="260" height="80" rx="4" fill="rgba(76,201,240,0.2)"/>
+      <circle cx="240" cy="150" r="15" fill="#94a3b8"/> <!-- Rocks -->
+      <circle cx="280" cy="160" r="20" fill="#94a3b8"/>
+      <circle cx="340" cy="140" r="18" fill="#94a3b8"/>
+      <!-- Substrate Tiles -->
+      <rect x="300" y="150" width="15" height="15" fill="#e36414"/>
+      <text class="diag-label" x="310" y="130" text-anchor="middle" fill="#3a4055">below water (substrate tiles)</text>
+
+      <!-- Camera -->
+      <rect x="120" y="85" width="40" height="30" rx="15" class="diag-camera"/>
+      <text class="diag-label" x="140" y="130" text-anchor="middle">camera (dome port)</text>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_e.png" alt="Concept E Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">Over-under split photography with a dome port lens, half the frame above the waterline and half below: above the surface, a shallow Ohio woodland stream with clear water, streamside trees, filtered sunlight — a scene that looks healthy and unremarkable. Below the surface, the rocky streambed is visible with small experimental substrate tiles anchored among the stones, the natural algal biofilm communities barely visible as a thin golden coating on the rocks. The waterline runs precisely across the center of the frame. Natural light, overhead sun diffused by clouds. Documentary environmental split underwater photography, 15mm wide, f/8, photorealistic --ar 3:2 --style raw</div>
+  </div>
+</div>
+
+<div class="concept-card posed">
+  <div class="concept-header">
+    <div class="concept-num">F</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Environmental / Long Exposure</div>
+      <div class="concept-title">Still Point</div>
+    </div>
+  </div>
+
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The idea:</strong> A long exposure — 4 to 8 seconds — of Fish Creek at golden hour. Costello stands motionless in the stream holding sampling equipment, the water blurring silky around his stationary legs. The stream flows around him as time flows around his research. He is the only sharp element in a frame full of motion. The light is warm and horizontal. This is a meditation image: a person who has returned to the same water for years, trying to understand something that moves too slowly to see.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/16</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">35mm</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Golden hour natural light, 6-second exposure</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Stream Background -->
+      <rect x="180" y="20" width="260" height="160" rx="4" fill="rgba(76,201,240,0.1)" stroke="#4cc9f0" stroke-width="1.5"/>
+
+      <!-- Water Flow (Blurred) -->
+      <path d="M 180 80 Q 250 80 280 120 T 440 100" fill="none" stroke="#4cc9f0" stroke-width="8" opacity="0.3"/>
+      <path d="M 180 120 Q 250 120 280 160 T 440 140" fill="none" stroke="#4cc9f0" stroke-width="8" opacity="0.2"/>
+      <text class="diag-label" x="220" y="100" text-anchor="middle" fill="#4cc9f0">silky water flow</text>
+
+      <!-- Light -->
+      <circle cx="400" cy="50" r="20" fill="rgba(255,209,102,0.3)"/>
+      <text class="diag-label" x="400" y="55" text-anchor="middle" fill="#e36414">golden hour light</text>
+
+      <!-- Costello (Sharp) -->
+      <rect x="300" y="60" width="20" height="80" rx="4" fill="#3a4055"/> <!-- Legs in waders -->
+      <ellipse cx="310" cy="50" r="15" fill="#1D9E75"/> <!-- Body/Head -->
+      <line x1="320" y1="60" x2="340" y2="120" stroke="#1D9E75" stroke-width="4"/> <!-- Sampling gear -->
+      <text class="diag-label" x="310" y="30" text-anchor="middle" fill="#3a4055">Costello (motionless, sharp)</text>
+
+      <!-- Camera -->
+      <rect x="290" y="185" width="40" height="15" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="195" text-anchor="middle">camera (tripod, long exposure)</text>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_f.png" alt="Concept F Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">Long-exposure photograph of a researcher in rubber waders standing completely motionless in a shallow Ohio creek at golden hour — 6 second exposure — the stream water blurred into silky motion around his stationary legs and feet. He holds a sampling device at his side. The surrounding trees and streamside vegetation are golden with late light. He is the only sharp element in the frame; everything that moves is rendered as soft flow. The water separates and rejoins around him as if he has always been there. Environmental science photography, tripod, 6-second exposure, 35mm, f/16, golden hour natural light, photorealistic --ar 3:2 --style raw</div>
+  </div>
+</div>
 <!-- ══ 04 ACTION ITEMS ═════════════════════════════════════ -->
 <div class="section-label">
   <h2>Action Items</h2>

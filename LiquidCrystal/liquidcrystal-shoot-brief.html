@@ -373,7 +373,118 @@ and the changing pattern on screen, simultaneously in frame. Science happening.<
   </div>
 </div>
 
+<div class="concept-card posed">
+  <div class="concept-header">
+    <div class="concept-num">E</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Experimental Portrait</div>
+      <div class="concept-title">Seen Through the Science</div>
+    </div>
+  </div>
 
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The conceptual problem with the original prompts:</strong> Holding a phone and standing in front of a microscope are both predictable. The liquid crystal story has one extraordinary visual asset that no other story in this collection has: the material itself turns light into color. The images should exploit that completely.</p>
+      <p><strong>The idea:</strong> A researcher photographed through a large sheet of polarizing film held between the camera and the subject — the film turning their image into a field of liquid crystal interference colors. Their face reads through a wash of shifting blue, magenta, and gold. They are literally seen through the material they study. The film can be mounted in a frame and held at an angle to produce the strongest color shift. This is a real in-camera technique.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/4</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">85mm studio portrait</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Studio lighting, polarizing film technique</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Black Background -->
+      <rect x="200" y="20" width="220" height="160" rx="4" fill="#1a1b26"/>
+
+      <!-- Researcher (Behind Film) -->
+      <ellipse cx="310" cy="110" rx="20" ry="30" fill="#4cc9f0" opacity="0.5"/>
+      <text class="diag-label" x="310" y="150" text-anchor="middle" fill="#4cc9f0">researcher face</text>
+
+      <!-- Polarizing Film -->
+      <rect x="250" y="60" width="120" height="100" rx="2" fill="url(#grad_polarize)" stroke="#fff" stroke-width="1" opacity="0.8"/>
+      <text class="diag-label" x="220" y="55" text-anchor="end" fill="#e36414">polarizing film</text>
+      <line x1="230" y1="60" x2="250" y2="70" stroke="#e36414" stroke-width="1.5" stroke-dasharray="2 2"/>
+
+      <!-- Camera -->
+      <rect x="290" y="180" width="40" height="15" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="195" text-anchor="middle">camera (85mm, studio portrait)</text>
+
+      <defs>
+        <linearGradient id="grad_polarize" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#4cc9f0" stop-opacity="0.6"/>
+          <stop offset="50%" stop-color="#e36414" stop-opacity="0.5"/>
+          <stop offset="100%" stop-color="#1D9E75" stop-opacity="0.6"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_e.png" alt="Concept E Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">A university liquid crystal researcher photographed through a large sheet of polarizing film held between the camera lens and the subject — the film transforms the researcher's face and body into a field of vivid interference colors: shifting blues, deep magentas, warm golds and greens, with the facial features still readable beneath the color wash. The background is black. The effect reads as both scientific and painterly — a human face remade by the material they have spent their career studying. Studio portrait, 85mm, f/4, black background, polarizing film technique, editorial science photography, photorealistic --ar 4:5 --style raw</div>
+  </div>
+</div>
+
+<div class="concept-card posed">
+  <div class="concept-header">
+    <div class="concept-num">F</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Dark Studio Portrait</div>
+      <div class="concept-title">Lit by What They Made</div>
+    </div>
+  </div>
+
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The idea:</strong> Total black studio. A researcher holds a smartphone screen facing outward — toward the camera — while their own face is in the background. The phone's LCD backlight illuminates their face from the front. They are lit by the technology their predecessors at Kent State made possible. They cannot see the screen — it faces away from them. They are illuminated by their own inheritance.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/1.8</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">85mm</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Phone screen as sole light source</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Black Studio Background -->
+      <rect x="200" y="20" width="220" height="160" rx="4" fill="#1a1b26"/>
+
+      <!-- Researcher Face -->
+      <ellipse cx="310" cy="80" rx="18" ry="25" fill="#ffd166" opacity="0.8"/>
+      <text class="diag-label" x="310" y="120" text-anchor="middle" fill="#ffd166">researcher</text>
+
+      <!-- Smartphone Screen (Pure Light) -->
+      <rect x="295" y="130" width="30" height="50" rx="2" fill="#fff" filter="drop-shadow(0 0 10px rgba(255,255,255,0.8))"/>
+      <text class="diag-label" x="270" y="150" text-anchor="end" fill="#fff">smartphone screen (facing camera)</text>
+      
+      <!-- Light from screen to face -->
+      <path d="M 295 130 L 290 80 L 330 80 L 325 130 Z" fill="#fff" opacity="0.2"/>
+
+      <!-- Camera -->
+      <rect x="290" y="185" width="40" height="15" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="350" y="195" text-anchor="start">camera</text>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_f.png" alt="Concept F Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">A university physics researcher in a completely dark studio holds a smartphone at arm's length with the screen facing outward toward the camera — the phone's vivid LCD backlight illuminating the researcher's face from the front. The screen's warm, saturated light is the only light source. The researcher's face is lit but their expression is inward, not performing. The phone screen itself is overexposed and featureless — pure light. The effect: a person illuminated by something they helped create, that faces away from them. Dark studio portrait, 85mm, f/1.8, phone screen as sole light source, photorealistic --ar 4:5 --style raw</div>
+  </div>
+</div>
 <!-- ══ 04 ACTION ITEMS ═════════════════════════════════════ -->
 <div class="section-label">
   <h2>Action Items</h2>

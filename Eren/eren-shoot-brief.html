@@ -401,7 +401,119 @@ strong top-down light. The sheer quantity of chips tells the story of iteration.
   </div>
 </div>
 
+<div class="concept-card posed">
+  <div class="concept-header">
+    <div class="concept-num">E</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Posed / Environmental Portrait</div>
+      <div class="concept-title">The Epicenter</div>
+    </div>
+  </div>
 
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The conceptual problem with the original prompts:</strong> A man knapping stone is expected. Every archaeology profile looks like this. The story isn't about the tools — it's about what it means to build something only to destroy it, over and over, across three million years of human time.</p>
+      <p><strong>The idea:</strong> Shoot from directly overhead. Eren sits cross-legged on the floor of the lab, completely surrounded by thousands of stone chips arranged in concentric rings radiating outward from where he sits — as if he is the still center of an explosion that has been happening for decades. We see only the top of his head and his hands resting in his lap, small within the field of stone. The viewer looks down at a human being inside the evidence of their own obsession.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/8 (deep focus)</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">35mm overhead</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Clinical overhead lighting, deep shadow at periphery</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Floor Background -->
+      <rect x="180" y="10" width="260" height="180" rx="4" fill="rgba(255,255,255,0.02)" stroke="#3a4055" stroke-width="1.5"/>
+      <circle cx="310" cy="100" r="80" fill="url(#grad_overhead)" opacity="0.4"/>
+      <!-- Concentric Rings -->
+      <circle cx="310" cy="100" r="30" fill="none" stroke="#e36414" stroke-width="1" stroke-dasharray="2 4"/>
+      <circle cx="310" cy="100" r="50" fill="none" stroke="#e36414" stroke-width="1.5" stroke-dasharray="3 6"/>
+      <circle cx="310" cy="100" r="70" fill="none" stroke="#e36414" stroke-width="1" stroke-dasharray="4 8"/>
+      <text class="diag-label" x="220" y="40" text-anchor="middle" fill="#e36414">stone chip rings</text>
+      <!-- Eren (Overhead) -->
+      <ellipse cx="310" cy="100" rx="16" ry="12" class="diag-subject"/> <!-- Shoulders -->
+      <circle cx="310" cy="100" r="8" fill="#fff"/> <!-- Head -->
+      <text class="diag-label" x="310" y="140" text-anchor="middle">Eren (overhead)</text>
+      <!-- Camera (Overhead) -->
+      <rect x="290" y="20" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="15" text-anchor="middle">camera (overhead, looking down)</text>
+      
+      <defs>
+        <radialGradient id="grad_overhead">
+          <stop offset="0%" stop-color="#fff" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_e.png" alt="Concept E Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">Directly overhead top-down view of an experimental archaeologist seated cross-legged on a laboratory floor, surrounded by thousands of stone flakes and debitage chips arranged in concentric rings radiating outward from his position — the accumulated refuse of years of stone tool replication experiments. Only the top of his head and his resting hands are visible; his face is not shown. The stone chips create a pattern that reads like an explosion map or a geological formation. Clinical overhead lighting, deep shadow at the periphery, the subject small at the center of their life's destruction. Editorial science photography, overhead 35mm equivalent, photorealistic, cinematic --ar 1:1 --style raw</div>
+  </div>
+</div>
+
+<div class="concept-card posed">
+  <div class="concept-header">
+    <div class="concept-num">F</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Experimental / Long Exposure</div>
+      <div class="concept-title">Three Million Years in One Frame</div>
+    </div>
+  </div>
+
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The idea:</strong> A long exposure — 15 to 30 seconds — with Eren completely motionless at the knapping bench while a single assistant moves around him during the exposure. Eren is the only sharp element. The movement of the other person becomes a ghost, a blur of motion that suggests the accumulated human activity around this one fixed point of expertise. The chips on the bench are sharp. His hands are sharp. Everything else is time passing. This is what three million years of iterative learning looks like: one person, still, surrounded by motion and history.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/8 – f/11 (for depth and long exposure)</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">50mm on tripod</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Dim workshop lighting, warm single overhead practical above bench</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Bench & Light -->
+      <rect x="220" y="100" width="180" height="40" rx="2" class="diag-object"/>
+      <text class="diag-label" x="310" y="125" text-anchor="middle">knapping bench</text>
+      
+      <circle cx="310" cy="30" r="10" fill="rgba(255,255,255,0.1)" stroke="#ffd166" stroke-width="1.5"/>
+      <text class="diag-label" x="310" y="20" text-anchor="middle" fill="#ffd166">overhead practical light</text>
+      <polygon points="310,40 370,100 250,100" fill="#ffd166" opacity="0.1"/>
+
+      <!-- Eren (Sharp) -->
+      <ellipse cx="310" cy="80" rx="15" ry="20" class="diag-subject"/>
+      <text class="diag-label" x="310" y="70" text-anchor="middle">Eren (motionless/sharp)</text>
+
+      <!-- Ghost Figure -->
+      <path d="M 220 80 Q 250 50 280 80" fill="none" stroke="#4cc9f0" stroke-width="20" stroke-linecap="round" opacity="0.2"/>
+      <text class="diag-label" x="250" y="60" text-anchor="end" fill="#4cc9f0">ghosted figure (moving)</text>
+
+      <!-- Camera -->
+      <rect x="290" y="160" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="176" text-anchor="middle">camera (tripod, long exposure)</text>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_f.png" alt="Concept F Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">Long-exposure photograph of an experimental archaeologist completely motionless at a stone-covered knapping workbench, sharp and clear, while a second figure moves through the frame during a 20-second exposure — rendered as a soft ghosted blur. The stone chips, the bench, and the seated researcher are the only sharp elements. Dim workshop lighting, warm single overhead practical light above the workbench, deep shadow at the edges of the frame. The effect reads like one man outside of time, surrounded by motion he has already completed. Editorial experimental photography, tripod, 50mm, long exposure motion blur, photorealistic --ar 3:2 --style raw</div>
+  </div>
+</div>
 <!-- ══ 04 ACTION ITEMS ═════════════════════════════════════ -->
 <div class="section-label">
   <h2>Action Items</h2>

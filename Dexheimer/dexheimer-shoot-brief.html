@@ -369,7 +369,119 @@ is the distortion of spacetime itself.</p>
   </div>
 </div>
 
+<div class="concept-card posed">
+  <div class="concept-header">
+    <div class="concept-num">E</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Night Exterior Portrait</div>
+      <div class="concept-title">What Is Above Her</div>
+    </div>
+  </div>
 
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The conceptual problem with the original prompts:</strong> A physicist at a chalkboard is the physics portrait cliché. The actual story is about scale — a person in Kent, Ohio holding in her mind the most extreme conditions in the known universe, conditions she will never see, touch, or measure directly. The images should carry that impossible distance.</p>
+      <p><strong>The idea:</strong> A night exterior. Dexheimer stands at her office window — but the camera is outside, looking in through the glass. She is visible inside, lit by her monitor. Above her head, through the glass and through the window frame, the actual night sky is visible. She is studying what is directly above her, and she cannot see it for the ceiling. The neutron stars she models are overhead right now. The glass is the only thing between her work and its subject.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/2.8</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">50mm</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Monitor light interior, long exposure for stars exterior</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Window Frame -->
+      <rect x="220" y="20" width="180" height="160" rx="2" fill="none" stroke="#3a4055" stroke-width="6"/>
+      <line x1="220" y1="100" x2="400" y2="100" stroke="#3a4055" stroke-width="4"/>
+
+      <!-- Upper Half: Night Sky -->
+      <rect x="223" y="23" width="174" height="75" fill="#1a1b26"/>
+      <circle cx="250" cy="40" r="1" fill="#fff" opacity="0.8"/>
+      <circle cx="280" cy="60" r="1.5" fill="#fff" opacity="0.6"/>
+      <circle cx="340" cy="30" r="1" fill="#fff" opacity="0.9"/>
+      <circle cx="370" cy="80" r="1" fill="#fff" opacity="0.7"/>
+      <text class="diag-label" x="310" y="55" text-anchor="middle" fill="#fff">night sky / stars</text>
+
+      <!-- Lower Half: Office -->
+      <rect x="223" y="102" width="174" height="75" fill="rgba(255,209,102,0.1)"/>
+      <ellipse cx="260" cy="140" rx="15" ry="20" fill="#1D9E75" opacity="0.8"/>
+      <text class="diag-label" x="260" y="165" text-anchor="middle">Dexheimer</text>
+      <rect x="330" y="130" width="10" height="30" rx="1" fill="#4cc9f0"/>
+      <text class="diag-label" x="350" y="145" text-anchor="start" fill="#4cc9f0">monitor glow</text>
+
+      <!-- Camera -->
+      <rect x="290" y="185" width="40" height="15" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="180" y="192" text-anchor="end">camera (outside looking in)</text>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_e.png" alt="Concept E Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">Night exterior photograph looking through a lit university office window from outside in the dark — a female physics professor is visible inside, seated at a monitor, her face lit by the screen. Through the glass above her head, the actual night sky is visible — dark blue-black with visible stars. The window frame divides the composition: her illuminated interior world below, the dark astronomical sky above. Shot from outside, camera approximately 10 feet from the glass. The exterior is dark, cold; the interior is warm and lit. Editorial night exterior portrait, 50mm, f/2.8, long enough exposure to capture stars in the sky, photorealistic --ar 3:2 --style raw</div>
+  </div>
+</div>
+
+<div class="concept-card doc">
+  <div class="concept-header">
+    <div class="concept-num">F</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Documentary / Scale Scale</div>
+      <div class="concept-title">Overwhelmed by Scale</div>
+    </div>
+  </div>
+
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The idea:</strong> Dexheimer stands with her back to camera, looking up at a ceiling or wall where her neutron star merger simulation is projected enormous — filling her entire field of vision. She is small. The explosion she is studying is not. We see only the back of her head and her slightly upturned posture, the way you stand when you look at something you cannot contain. The scale differential is the entire argument: this is what it looks like to spend a career trying to understand something larger than any frame.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/2.8</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">24mm wide</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Projection as only light</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Ceiling / Wall Projection -->
+      <path d="M 160 20 Q 310 0 460 20 L 460 120 L 160 120 Z" fill="url(#grad_plasma)"/>
+      <text class="diag-label" x="310" y="50" text-anchor="middle" fill="#fff">massive plasma projection</text>
+
+      <!-- Dexheimer Silhouette -->
+      <ellipse cx="310" cy="150" rx="12" ry="25" fill="#1a1b26"/>
+      <text class="diag-label" x="310" y="185" text-anchor="middle">Dexheimer (small, back to camera)</text>
+
+      <!-- Camera -->
+      <rect x="290" y="185" width="40" height="15" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="230" y="192" text-anchor="end">camera (24mm wide)</text>
+
+      <defs>
+        <radialGradient id="grad_plasma">
+          <stop offset="0%" stop-color="#e36414" stop-opacity="0.8"/>
+          <stop offset="50%" stop-color="#4cc9f0" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#1a1b26" stop-opacity="0.1"/>
+        </radialGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_f.png" alt="Concept F Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">A female physicist stands with her back to camera in a darkened room, looking up at a massive ceiling projection of a neutron star merger simulation — vivid explosions of plasma, shock waves, and dense matter in blues, whites, and burning oranges filling the entire projection surface above and ahead of her. She is small in the lower portion of the frame, her silhouette barely lit by the projection's ambient spill. Her head is slightly tilted upward. She does not turn around. The scale between the human figure and the projected phenomenon is the subject. Documentary science photography, 24mm wide, f/2.8, projection as only light, photorealistic --ar 3:2 --style raw</div>
+  </div>
+</div>
 <!-- ══ 04 ACTION ITEMS ═════════════════════════════════════ -->
 <div class="section-label">
   <h2>Action Items</h2>

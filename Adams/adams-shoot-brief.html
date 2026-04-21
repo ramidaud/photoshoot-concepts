@@ -371,7 +371,127 @@ experience becomes analyzable data. No human subject in the main frame.</p>
   </div>
 </div>
 
+<div class="concept-card doc">
+  <div class="concept-header">
+    <div class="concept-num">E</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Documentary / Voyeuristic</div>
+      <div class="concept-title">Through the Door</div>
+    </div>
+  </div>
 
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The conceptual problem with the original prompts:</strong> A man in a chair and annotated papers are reasonable but too literal. This story is about what happens in private spaces between a researcher and people who have been through something terrible. The images should carry silence and weight, not data.</p>
+      <p><strong>The idea:</strong> The camera is in the hallway, looking through the small rectangular wire-mesh glass window in a closed interview room door. Adams is visible inside, seated, partially obscured by the door frame and the wire mesh of the safety glass. His face is slightly distorted. He appears to be listening to something we cannot hear. We are outside the room where the hard things happen — the camera is always outside. This is an image about the irreducible privacy of what Adams studies.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/2.8</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">85mm</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Fluorescent room light, dark hallway</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Hallway (Dark) -->
+      <rect x="180" y="20" width="260" height="160" fill="#1a1b26"/>
+      <text class="diag-label" x="190" y="40" text-anchor="start" fill="#4cc9f0">dark hallway</text>
+
+      <!-- Door & Window -->
+      <rect x="260" y="20" width="100" height="160" fill="#3a4055" stroke="#000" stroke-width="2"/>
+      <rect x="280" y="50" width="60" height="80" rx="2" fill="#f0f4f8"/> <!-- Window -->
+
+      <!-- Adams (Inside) -->
+      <ellipse cx="310" cy="90" rx="15" ry="20" fill="#1D9E75" opacity="0.8"/>
+      <text class="diag-label" x="350" y="95" text-anchor="start" fill="#1D9E75">Adams</text>
+
+      <!-- Wire Mesh -->
+      <path d="M 280 60 L 340 120 M 280 70 L 340 130 M 280 80 L 330 130 M 290 50 L 340 100 M 300 50 L 340 90 M 280 120 L 340 60 M 280 110 L 330 60 M 280 100 L 320 60 M 290 130 L 340 80 M 300 130 L 340 90" stroke="#000" stroke-width="1" opacity="0.3"/>
+      <text class="diag-label" x="270" y="140" text-anchor="end">wire mesh glass</text>
+
+      <!-- Camera -->
+      <rect x="290" y="165" width="40" height="15" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="190" text-anchor="middle">camera (85mm, compressed)</text>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_e.png" alt="Concept E Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">View through the small wire-mesh safety glass window of a closed institutional door — inside an interview room, a male researcher is seated facing slightly away, expression attentive and still, as if listening. His face is partially obscured by the door frame and slightly distorted by the wire mesh embedded in the glass. The room behind him is spare and fluorescent-lit. The hallway outside is dark. The viewer is always outside this room. Voyeuristic institutional documentary photography, 85mm, f/2.8, compressed through the door glass, photorealistic --ar 4:5 --style raw</div>
+  </div>
+</div>
+
+<div class="concept-card doc">
+  <div class="concept-header">
+    <div class="concept-num">F</div>
+    <div class="concept-meta">
+      <div class="concept-type-badge">Environmental / Empty Space</div>
+      <div class="concept-title">What Remains After</div>
+    </div>
+  </div>
+
+  <div class="concept-body">
+    <div class="concept-desc">
+      <p><strong>The idea:</strong> The interview room, completely empty. Two chairs facing each other. A rectangle of late afternoon light falling diagonally across the floor from a window off-frame. The chairs are not centered — the listener's chair is slightly closer to camera, slightly turned. Motes of dust in the light beam. No human beings. But the room is full of every conversation that has ever happened in it. This is the most emotionally direct image in the collection. The absence is the subject.</p>
+    </div>
+    <div class="concept-tech">
+      <h5>Technical Notes</h5>
+      <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">f/8</span></div>
+      <div class="tech-line"><span class="tech-key">Lens</span><span class="tech-val">35mm</span></div>
+      <div class="tech-line"><span class="tech-key">Light</span><span class="tech-val">Natural afternoon light only</span></div>
+    </div>
+  </div>
+
+  <div class="concept-diagram">
+    <h5>Setup Diagram</h5>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Room Background -->
+      <rect x="180" y="20" width="260" height="160" rx="2" fill="#f0f4f8" stroke="#cbd5e1" stroke-width="2"/>
+      
+      <!-- Diagonal Light Beam -->
+      <path d="M 180 60 L 400 180 L 300 180 L 180 120 Z" fill="url(#grad_beam)"/>
+      <text class="diag-label" x="220" y="160" text-anchor="end" fill="#e36414">afternoon light</text>
+
+      <!-- Two Chairs -->
+      <rect x="260" y="100" width="20" height="20" rx="2" fill="#3a4055"/>
+      <text class="diag-label" x="270" y="90" text-anchor="middle">chair</text>
+
+      <rect x="340" y="110" width="20" height="20" rx="2" fill="#3a4055"/> <!-- Slightly angled/closer -->
+      <text class="diag-label" x="350" y="145" text-anchor="middle">listener's chair</text>
+
+      <!-- Dust Motes -->
+      <circle cx="280" cy="130" r="1" fill="#fff" opacity="0.8"/>
+      <circle cx="290" cy="140" r="1.5" fill="#fff" opacity="0.6"/>
+      <circle cx="310" cy="120" r="1" fill="#fff" opacity="0.9"/>
+      <circle cx="320" cy="150" r="1.2" fill="#fff" opacity="0.7"/>
+
+      <!-- Camera -->
+      <rect x="290" y="185" width="40" height="15" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="195" text-anchor="middle">camera (35mm)</text>
+
+      <defs>
+        <linearGradient id="grad_beam" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffd166" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="concept-generated-img">
+    <img src="./images/concept_f.png" alt="Concept F Generated Image" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  <div class="concept-prompt">
+    <h5>AI Visualization Prompt</h5>
+    <div class="prompt-text">An empty institutional interview room — two simple chairs facing each other on a worn linoleum floor. A rectangle of late afternoon sunlight falls diagonally across the floor from a window just outside the frame. One chair is slightly closer to camera than the other, slightly angled — the listener's chair. Dust motes are visible in the light beam. The walls are neutral and bare. No human subjects. The room is spare, quiet, and charged with accumulated human weight. Environmental documentary photography, 35mm, f/8, natural afternoon light only, photorealistic --ar 3:2 --style raw</div>
+  </div>
+</div>
 <!-- ══ 04 ACTION ITEMS ═════════════════════════════════════ -->
 <div class="section-label">
   <h2>Action Items</h2>

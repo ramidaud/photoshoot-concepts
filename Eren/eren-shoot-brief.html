@@ -161,19 +161,35 @@ stone edges. Direct or 3/4 gaze. The lab fills the background.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-softbox                  rim
-    (camera-left)           (behind)
-
-         [Eren]
-         /knapping
-        / workbench
-
-
-
-
-              camera
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Bench -->
+      <rect x="210" y="70" width="160" height="40" rx="4" fill="rgba(255,255,255,0.03)" stroke="#3a4055" stroke-width="1.5"/>
+      <text class="diag-label" x="290" y="95" text-anchor="middle">workbench</text>
+      <!-- Eren -->
+      <ellipse cx="290" cy="50" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="290" y="55" text-anchor="middle">Eren</text>
+      <!-- Camera -->
+      <rect x="268" y="150" width="44" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="290" y="165" text-anchor="middle">camera</text>
+      <text class="diag-label" x="290" y="185" text-anchor="middle" fill="#b388ff">50/85mm</text>
+      <line x1="290" y1="140" x2="290" y2="80" stroke="#b388ff" stroke-width="0.7" stroke-dasharray="2 3" opacity="0.5"/>
+      <!-- Softbox -->
+      <rect x="100" y="30" width="20" height="60" rx="2" fill="rgba(255,255,255,0.05)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="80" y="60" text-anchor="end" fill="#ffd166">softbox</text>
+      <!-- Light cone from softbox -->
+      <polygon points="125,40 260,30 260,70 125,80" fill="url(#grad1)" opacity="0.2"/>
+      <!-- Rim -->
+      <circle cx="380" cy="20" r="10" fill="rgba(255,255,255,0.1)" stroke="#fff" stroke-width="1"/>
+      <text class="diag-label" x="400" y="24" fill="#fff">rim light</text>
+      <line x1="370" y1="28" x2="310" y2="45" stroke="#fff" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+      
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ffd166" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -222,17 +238,21 @@ entire premise of the lab.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-hard sidelight
-                (45 degrees)
-                     |
-                     |
-    [ancient tool]  [replica tool]
-         gloved hand for scale
-
-              camera overhead
-              or slight angle
-    </pre>
+    <svg width="100%" viewBox="0 0 620 180" style="display:block;">
+      <!-- Tools -->
+      <rect x="220" y="80" width="60" height="40" rx="10" class="diag-object"/>
+      <text class="diag-label" x="250" y="105" text-anchor="middle">ancient</text>
+      <rect x="300" y="80" width="60" height="40" rx="10" class="diag-object"/>
+      <text class="diag-label" x="330" y="105" text-anchor="middle">replica</text>
+      <!-- Hard sidelight -->
+      <circle cx="280" cy="20" r="8" fill="rgba(255,255,255,0.1)" stroke="#fff" stroke-width="1"/>
+      <text class="diag-label" x="280" y="12" text-anchor="middle" fill="#fff">hard light (45°)</text>
+      <line x1="280" y1="30" x2="280" y2="70" stroke="#fff" stroke-width="1.5" opacity="0.8"/>
+      <!-- Camera -->
+      <rect x="270" y="130" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="290" y="146" text-anchor="middle">camera</text>
+      <text class="diag-label" x="290" y="165" text-anchor="middle" fill="#b388ff">overhead</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -280,20 +300,27 @@ by the microscope screen or a positioned work light.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-[microscope / loupe]
-    practical light spill
-    on face
-
-                [Eren]
-                3/4 profile
-                absorbed
-
-
-
-
-    camera                      85–135mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 180" style="display:block;">
+      <!-- Microscope -->
+      <rect x="180" y="40" width="50" height="60" rx="4" fill="rgba(255,255,255,0.03)" stroke="#4cc9f0" stroke-width="1"/>
+      <text class="diag-label" x="205" y="75" text-anchor="middle" fill="#4cc9f0">scope</text>
+      <!-- Light spill -->
+      <polygon points="235,50 300,40 300,100 235,90" fill="url(#grad2)" opacity="0.3"/>
+      <!-- Eren -->
+      <ellipse cx="320" cy="70" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="320" y="75" text-anchor="middle">Eren</text>
+      <!-- Camera -->
+      <rect x="300" y="140" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="320" y="156" text-anchor="middle">camera</text>
+      <text class="diag-label" x="320" y="172" text-anchor="middle" fill="#b388ff">85-135mm</text>
+      
+      <defs>
+        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ffd166" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -341,15 +368,28 @@ strong top-down light. The sheer quantity of chips tells the story of iteration.
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-camera
-    overhead
-      |
-      |
-    [workbench]
-    [ chips / debitage scattered ]
-    [ single finished tool at center ]
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <rect x="160" y="80" width="260" height="100" rx="4" fill="rgba(255,255,255,0.02)" stroke="#3a4055" stroke-width="1"/>
+      <!-- Debitage -->
+      <circle cx="200" cy="100" r="3" fill="#6b7280" opacity="0.6"/>
+      <circle cx="220" cy="110" r="4" fill="#6b7280" opacity="0.6"/>
+      <circle cx="250" cy="90" r="2" fill="#6b7280" opacity="0.6"/>
+      <circle cx="280" cy="150" r="3" fill="#6b7280" opacity="0.6"/>
+      <circle cx="340" cy="110" r="5" fill="#6b7280" opacity="0.6"/>
+      <circle cx="360" cy="160" r="4" fill="#6b7280" opacity="0.6"/>
+      <circle cx="180" cy="160" r="2" fill="#6b7280" opacity="0.6"/>
+      <circle cx="380" cy="130" r="3" fill="#6b7280" opacity="0.6"/>
+      <circle cx="270" cy="120" r="2" fill="#6b7280" opacity="0.6"/>
+      <text class="diag-label" x="290" y="170" text-anchor="middle">debitage scattered</text>
+      <!-- Tool -->
+      <ellipse cx="290" cy="130" rx="20" ry="12" class="diag-object"/>
+      <text class="diag-label" x="290" y="134" text-anchor="middle">tool</text>
+      <!-- Camera overhead -->
+      <rect x="270" y="20" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="290" y="36" text-anchor="middle">camera</text>
+      <text class="diag-label" x="290" y="52" text-anchor="middle" fill="#b388ff">overhead</text>
+      <line x1="290" y1="58" x2="290" y2="76" stroke="#b388ff" stroke-width="0.7" stroke-dasharray="2 3" opacity="0.5"/>
+    </svg>
   </div>
 
   <div class="concept-generated-img">

@@ -159,20 +159,30 @@ direct, editorial. Location: Eren's lab or a neutral environment.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-softbox
-    (camera-left)
-                      rim
-                     (behind)
-
-         [Joshua]
-         holding tools
-
-
-
-
-              camera
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Softbox -->
+      <rect x="100" y="30" width="20" height="60" rx="2" fill="rgba(255,255,255,0.05)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="80" y="60" text-anchor="end" fill="#ffd166">softbox</text>
+      <polygon points="125,40 260,70 260,110 125,80" fill="url(#grad1_j)" opacity="0.2"/>
+      <!-- Rim -->
+      <circle cx="380" cy="20" r="10" fill="rgba(255,255,255,0.1)" stroke="#fff" stroke-width="1"/>
+      <text class="diag-label" x="400" y="24" fill="#fff">rim light</text>
+      <line x1="370" y1="28" x2="310" y2="75" stroke="#fff" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+      <!-- Joshua -->
+      <ellipse cx="290" cy="80" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="290" y="85" text-anchor="middle">Joshua</text>
+      <text class="diag-label" x="290" y="125" text-anchor="middle">holding tools</text>
+      <!-- Camera -->
+      <rect x="268" y="160" width="44" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="290" y="175" text-anchor="middle">camera</text>
+      <line x1="290" y1="150" x2="290" y2="110" stroke="#b388ff" stroke-width="0.7" stroke-dasharray="2 3" opacity="0.5"/>
+      <defs>
+        <linearGradient id="grad1_j" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ffd166" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -220,17 +230,28 @@ precise, archival-quality composition.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-hard light
-    low angle  \
-                \
-    [tool][tool][tool][tool][tool]
-    [tool][tool][tool][tool][tool]
-                     [tool]
-         gloved hand or scale bar
-
-              camera (slight angle or overhead)
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Grid of tools -->
+      <rect x="180" y="60" width="40" height="25" rx="5" class="diag-object"/>
+      <rect x="230" y="60" width="40" height="25" rx="5" class="diag-object"/>
+      <rect x="280" y="60" width="40" height="25" rx="5" class="diag-object"/>
+      <rect x="330" y="60" width="40" height="25" rx="5" class="diag-object"/>
+      <rect x="380" y="60" width="40" height="25" rx="5" class="diag-object"/>
+      <rect x="180" y="95" width="40" height="25" rx="5" class="diag-object"/>
+      <rect x="230" y="95" width="40" height="25" rx="5" class="diag-object"/>
+      <rect x="280" y="95" width="40" height="25" rx="5" class="diag-object"/>
+      <rect x="330" y="95" width="40" height="25" rx="5" class="diag-object"/>
+      <rect x="380" y="95" width="40" height="25" rx="5" class="diag-object"/>
+      <rect x="280" y="130" width="40" height="25" rx="5" class="diag-object"/>
+      <text class="diag-label" x="140" y="95" text-anchor="end">11 Adena tools</text>
+      <!-- Hard Light -->
+      <circle cx="100" cy="20" r="8" fill="rgba(255,255,255,0.1)" stroke="#fff" stroke-width="1"/>
+      <text class="diag-label" x="120" y="24" fill="#fff">hard low-angle light</text>
+      <line x1="110" y1="30" x2="160" y2="70" stroke="#fff" stroke-width="1.5" opacity="0.8"/>
+      <!-- Camera -->
+      <rect x="280" y="170" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="300" y="186" text-anchor="middle">camera (overhead)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -278,15 +299,20 @@ past." He is small in the frame; the landscape is the context.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-[open Ohio sky — 2/3 of frame]
-
-
-    [grass / field]
-    [Joshua — small, lower third]
-
-    camera — wide, ground level
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Landscape background -->
+      <rect x="160" y="20" width="300" height="120" rx="4" fill="rgba(255,255,255,0.02)" stroke="#3a4055" stroke-width="1"/>
+      <line x1="160" y1="100" x2="460" y2="100" stroke="#3a4055" stroke-width="1" stroke-dasharray="2 4"/>
+      <text class="diag-label" x="310" y="60" text-anchor="middle">open sky (2/3 frame)</text>
+      <text class="diag-label" x="310" y="120" text-anchor="middle">field</text>
+      <!-- Joshua -->
+      <circle cx="310" cy="130" r="6" class="diag-subject"/>
+      <text class="diag-label" x="330" y="134">Joshua (small)</text>
+      <!-- Camera -->
+      <rect x="290" y="160" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="176" text-anchor="middle">camera</text>
+      <text class="diag-label" x="310" y="192" text-anchor="middle" fill="#b388ff">wide angle (24mm)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -334,15 +360,24 @@ possible image that documents what is genuinely remarkable about this story.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-warm directional light
-           |
-           |
-    [journal page: author list]
-    [Joshua's hand / finger near his name]
-
-         camera, slight angle
-    </pre>
+    <svg width="100%" viewBox="0 0 620 180" style="display:block;">
+      <!-- Journal Page -->
+      <rect x="240" y="60" width="120" height="80" rx="2" fill="rgba(255,255,255,0.05)" stroke="#fff" stroke-width="1"/>
+      <line x1="250" y1="70" x2="350" y2="70" stroke="#6b7280" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="250" y1="80" x2="330" y2="80" stroke="#6b7280" stroke-width="1" stroke-dasharray="2 2"/>
+      <line x1="250" y1="90" x2="340" y2="90" stroke="#ffd166" stroke-width="1.5"/>
+      <text class="diag-label" x="370" y="94" fill="#ffd166">Joshua's name</text>
+      <!-- Hand -->
+      <ellipse cx="270" cy="100" rx="10" ry="15" fill="#E24B4A" opacity="0.6"/>
+      <text class="diag-label" x="270" y="130" text-anchor="middle">hand</text>
+      <!-- Light -->
+      <circle cx="300" cy="20" r="8" fill="rgba(255,255,255,0.1)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="320" y="24" fill="#ffd166">warm window light</text>
+      <line x1="300" y1="30" x2="300" y2="50" stroke="#ffd166" stroke-width="1" stroke-dasharray="2 2"/>
+      <!-- Camera -->
+      <rect x="280" y="150" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="300" y="166" text-anchor="middle">camera</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">

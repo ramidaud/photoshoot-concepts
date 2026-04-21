@@ -157,21 +157,21 @@ within it. This is the portrait that makes the invisible tangible.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-[projected simulation: neutron star merger]
-    [fills background wall]
-
-         key light
-         (low power)
-
-              [Dexheimer]
-              standing in projection light
-
-
-
-
-         camera, 85mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Projection Background -->
+      <rect x="160" y="20" width="300" height="120" rx="4" fill="rgba(255,255,255,0.02)" stroke="#e36414" stroke-width="1.5"/>
+      <text class="diag-label" x="310" y="60" text-anchor="middle" fill="#e36414">projected simulation</text>
+      <text class="diag-label" x="310" y="80" text-anchor="middle" fill="#e36414">neutron star merger</text>
+      <!-- Key Light -->
+      <circle cx="200" cy="80" r="8" fill="rgba(255,255,255,0.1)" stroke="#fff" stroke-width="1"/>
+      <text class="diag-label" x="180" y="85" text-anchor="end">key light (low)</text>
+      <!-- Dexheimer -->
+      <ellipse cx="310" cy="110" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="310" y="115" text-anchor="middle">Dexheimer</text>
+      <!-- Camera -->
+      <rect x="290" y="160" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="176" text-anchor="middle">camera (85mm)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -220,18 +220,20 @@ in the universe.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-[monitor 1: code]    [monitor 2: simulation]
-    screen glow on face
-
-              [Dexheimer]
-              profile
-
-
-
-
-    camera (slightly above, 35–50mm)
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Monitors -->
+      <rect x="200" y="30" width="80" height="60" rx="4" fill="rgba(255,255,255,0.03)" stroke="#4cc9f0" stroke-width="1"/>
+      <text class="diag-label" x="240" y="65" text-anchor="middle" fill="#4cc9f0">code</text>
+      <rect x="300" y="30" width="80" height="60" rx="4" fill="rgba(255,255,255,0.03)" stroke="#e36414" stroke-width="1"/>
+      <text class="diag-label" x="340" y="65" text-anchor="middle" fill="#e36414">simulation</text>
+      <path d="M 280 90 L 300 120 L 260 120 Z" fill="rgba(255,255,255,0.1)"/>
+      <!-- Dexheimer -->
+      <ellipse cx="280" cy="120" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="280" y="125" text-anchor="middle">Dexheimer (profile)</text>
+      <!-- Camera -->
+      <rect x="260" y="170" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="280" y="186" text-anchor="middle">camera (above)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -279,19 +281,21 @@ derived them.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-key light (warm)
-    camera-left
-                    [whiteboard: equations, derivations]
-
-         [Dexheimer]
-         direct gaze
-
-
-
-
-         camera, 35–50mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Whiteboard -->
+      <rect x="240" y="20" width="220" height="100" rx="4" fill="rgba(255,255,255,0.05)" stroke="#fff" stroke-width="1.5"/>
+      <text class="diag-label" x="350" y="60" text-anchor="middle">whiteboard (equations)</text>
+      <!-- Key Light -->
+      <circle cx="180" cy="40" r="8" fill="rgba(255,255,255,0.1)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="160" y="44" text-anchor="end" fill="#ffd166">warm key</text>
+      <line x1="180" y1="50" x2="260" y2="90" stroke="#ffd166" stroke-width="1" stroke-dasharray="2 2"/>
+      <!-- Dexheimer -->
+      <ellipse cx="280" cy="100" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="280" y="105" text-anchor="middle">Dexheimer</text>
+      <!-- Camera -->
+      <rect x="260" y="160" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="280" y="176" text-anchor="middle">camera (35-50mm)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -338,15 +342,22 @@ is the distortion of spacetime itself.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-warm light
-          |
-    [LIGO signal printout]
-         waveform visible
-         hand / pen at peak
-
-         camera, 50mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 180" style="display:block;">
+      <!-- Light -->
+      <circle cx="310" cy="20" r="8" fill="rgba(255,255,255,0.1)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="335" y="24" fill="#ffd166">warm light</text>
+      <line x1="310" y1="30" x2="310" y2="60" stroke="#ffd166" stroke-width="1" stroke-dasharray="2 2"/>
+      <!-- Printout -->
+      <rect x="240" y="70" width="140" height="60" rx="2" fill="rgba(255,255,255,0.05)" stroke="#fff" stroke-width="1.5"/>
+      <path d="M 250 100 Q 270 80 290 100 T 330 100" fill="none" stroke="#4cc9f0" stroke-width="2"/>
+      <text class="diag-label" x="310" y="120" text-anchor="middle">LIGO signal</text>
+      <!-- Hand/Pen -->
+      <line x1="280" y1="140" x2="295" y2="105" stroke="#E24B4A" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+      <text class="diag-label" x="270" y="150" text-anchor="middle">pen</text>
+      <!-- Camera -->
+      <rect x="290" y="150" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="166" text-anchor="middle">camera (50mm)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">

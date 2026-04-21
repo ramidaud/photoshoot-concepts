@@ -163,19 +163,22 @@ experiences.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-softbox (large, 45 degrees)
-    (camera-left)
-
-              [Adams]
-              direct gaze
-              simple background
-
-
-
-
-         camera, 85mm, tight
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Softbox -->
+      <rect x="140" y="30" width="20" height="60" rx="2" fill="rgba(255,255,255,0.05)" stroke="#fff" stroke-width="1"/>
+      <text class="diag-label" x="120" y="60" text-anchor="end">large softbox (45°)</text>
+      <line x1="160" y1="60" x2="260" y2="100" stroke="#fff" stroke-width="1" stroke-dasharray="2 2"/>
+      <!-- Background -->
+      <rect x="220" y="20" width="160" height="20" rx="2" fill="rgba(255,255,255,0.02)" stroke="#3a4055" stroke-width="1"/>
+      <text class="diag-label" x="300" y="35" text-anchor="middle">simple neutral background</text>
+      <!-- Adams -->
+      <ellipse cx="280" cy="110" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="280" y="115" text-anchor="middle">Adams</text>
+      <text class="diag-label" x="280" y="150" text-anchor="middle">direct gaze</text>
+      <!-- Camera -->
+      <rect x="260" y="170" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="280" y="186" text-anchor="middle">camera (85mm, tight)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -222,15 +225,22 @@ turned into data, and a researcher thinking through what it means.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-warm directional light
-          |
-    [transcript: annotated, coded]
-         handwriting visible
-         hand + pen in frame
-
-         camera, 50mm, slight angle
-    </pre>
+    <svg width="100%" viewBox="0 0 620 180" style="display:block;">
+      <!-- Light -->
+      <circle cx="310" cy="20" r="8" fill="rgba(255,255,255,0.1)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="335" y="24" fill="#ffd166">warm directional light</text>
+      <line x1="310" y1="30" x2="310" y2="60" stroke="#ffd166" stroke-width="1" stroke-dasharray="2 2"/>
+      <!-- Transcript -->
+      <rect x="240" y="70" width="140" height="80" rx="2" fill="rgba(255,255,255,0.05)" stroke="#fff" stroke-width="1.5"/>
+      <line x1="260" y1="90" x2="360" y2="90" stroke="#4cc9f0" stroke-width="4" opacity="0.5"/>
+      <text class="diag-label" x="310" y="115" text-anchor="middle">annotated transcript</text>
+      <!-- Hand/Pen -->
+      <line x1="280" y1="150" x2="295" y2="115" stroke="#E24B4A" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+      <text class="diag-label" x="270" y="160" text-anchor="middle">pen</text>
+      <!-- Camera -->
+      <rect x="330" y="150" width="40" height="24" rx="3" class="diag-camera" transform="rotate(-15 350 162)"/>
+      <text class="diag-label" x="390" y="166" text-anchor="start">camera (slight angle)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -277,18 +287,21 @@ from him. It is the whole study.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-[window light, soft]
-
-    [empty chair]    [Adams]
-                     relaxed posture
-                     looking at empty chair or camera
-
-
-
-
-    camera, 50–85mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Window -->
+      <rect x="220" y="20" width="160" height="20" rx="2" fill="rgba(255,255,255,0.05)" stroke="#4cc9f0" stroke-width="1.5"/>
+      <text class="diag-label" x="300" y="55" text-anchor="middle" fill="#4cc9f0">soft window light</text>
+      <!-- Chairs -->
+      <rect x="220" y="90" width="40" height="40" rx="4" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text class="diag-label" x="240" y="145" text-anchor="middle">empty chair</text>
+      <!-- Adams -->
+      <ellipse cx="340" cy="110" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="340" y="115" text-anchor="middle">Adams</text>
+      <text class="diag-label" x="340" y="150" text-anchor="middle">relaxed posture</text>
+      <!-- Camera -->
+      <rect x="280" y="170" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="300" y="186" text-anchor="middle">camera (50-85mm)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -334,14 +347,19 @@ experience becomes analyzable data. No human subject in the main frame.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-[monitor: qualitative coding software]
-    color-coded text visible
-
-         hand or cursor active on screen
-
-    camera, 50mm, slight angle to avoid reflection
-    </pre>
+    <svg width="100%" viewBox="0 0 620 180" style="display:block;">
+      <!-- Monitor -->
+      <rect x="220" y="30" width="180" height="100" rx="4" fill="rgba(255,255,255,0.03)" stroke="#4cc9f0" stroke-width="1"/>
+      <line x1="240" y1="60" x2="300" y2="60" stroke="#e36414" stroke-width="6" opacity="0.6"/>
+      <line x1="240" y1="80" x2="340" y2="80" stroke="#1D9E75" stroke-width="6" opacity="0.6"/>
+      <line x1="240" y1="100" x2="280" y2="100" stroke="#b388ff" stroke-width="6" opacity="0.6"/>
+      <text class="diag-label" x="310" y="50" text-anchor="middle" fill="#4cc9f0">coding software</text>
+      <text class="diag-label" x="350" y="110" text-anchor="middle">cursor/hand</text>
+      <polygon points="320,100 325,115 315,115" fill="#fff"/>
+      <!-- Camera -->
+      <rect x="270" y="150" width="40" height="24" rx="3" class="diag-camera" transform="rotate(-10 290 162)"/>
+      <text class="diag-label" x="330" y="162" text-anchor="start">camera (slight angle)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">

@@ -155,18 +155,25 @@ of his discovery: a brain before, a brain after, and the difference between them
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-key light (low power)              [monitor: brain scans]
-    (camera-left)                      before | after
-
-              [Gunstad]
-              3/4 profile
-
-
-
-
-         camera, 85mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Light -->
+      <circle cx="150" cy="20" r="8" fill="rgba(255,255,255,0.1)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="175" y="24" fill="#ffd166">low key light</text>
+      <line x1="150" y1="30" x2="150" y2="60" stroke="#ffd166" stroke-width="1" stroke-dasharray="2 2"/>
+      <!-- Monitor -->
+      <rect x="360" y="30" width="120" height="80" rx="4" fill="rgba(255,255,255,0.03)" stroke="#4cc9f0" stroke-width="1"/>
+      <line x1="420" y1="30" x2="420" y2="110" stroke="#4cc9f0" stroke-width="0.5" stroke-dasharray="2 2"/>
+      <text class="diag-label" x="390" y="70" text-anchor="middle" fill="#4cc9f0">before</text>
+      <text class="diag-label" x="450" y="70" text-anchor="middle" fill="#4cc9f0">after</text>
+      <!-- Gunstad -->
+      <ellipse cx="280" cy="80" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="280" y="85" text-anchor="middle">Gunstad</text>
+      <text class="diag-label" x="280" y="125" text-anchor="middle">3/4 profile</text>
+      <!-- Camera -->
+      <rect x="260" y="160" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="280" y="176" text-anchor="middle">camera</text>
+      <line x1="280" y1="150" x2="280" y2="110" stroke="#b388ff" stroke-width="0.7" stroke-dasharray="2 3" opacity="0.5"/>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -214,15 +221,22 @@ the finding without a word of explanation.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-light table or monitor
-    even backlight
-
-    [BEFORE scan]    [AFTER scan]
-         hand in frame for scale
-
-         camera, slight angle, 50mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 180" style="display:block;">
+      <!-- Light table -->
+      <rect x="180" y="30" width="260" height="100" rx="4" fill="rgba(255,255,255,0.05)" stroke="#fff" stroke-width="1.5"/>
+      <text class="diag-label" x="310" y="20" text-anchor="middle" fill="#fff">light table / even backlight</text>
+      <!-- Scans -->
+      <rect x="220" y="50" width="60" height="60" rx="2" class="diag-object"/>
+      <text class="diag-label" x="250" y="80" text-anchor="middle">BEFORE</text>
+      <rect x="340" y="50" width="60" height="60" rx="2" class="diag-object"/>
+      <text class="diag-label" x="370" y="80" text-anchor="middle">AFTER</text>
+      <!-- Hand -->
+      <ellipse cx="280" cy="110" rx="15" ry="10" fill="#E24B4A" opacity="0.6"/>
+      <text class="diag-label" x="280" y="135" text-anchor="middle">hand for scale</text>
+      <!-- Camera -->
+      <rect x="290" y="150" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="166" text-anchor="middle">camera (50mm)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -269,17 +283,29 @@ invisible things.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-softbox (camera-left)
-
-              [Gunstad]        [office: books, diplomas, data]
-              direct gaze
-
-
-
-
-         camera, 85mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Softbox -->
+      <rect x="140" y="30" width="20" height="60" rx="2" fill="rgba(255,255,255,0.05)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="120" y="60" text-anchor="end" fill="#ffd166">warm softbox</text>
+      <polygon points="165,40 280,60 280,100 165,80" fill="url(#grad_gun_c)" opacity="0.2"/>
+      <!-- Background -->
+      <rect x="340" y="20" width="120" height="80" rx="4" fill="rgba(255,255,255,0.02)" stroke="#3a4055" stroke-width="1"/>
+      <text class="diag-label" x="400" y="45" text-anchor="middle">office</text>
+      <text class="diag-label" x="400" y="65" text-anchor="middle">books / brain model</text>
+      <!-- Gunstad -->
+      <ellipse cx="300" cy="80" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="300" y="85" text-anchor="middle">Gunstad</text>
+      <text class="diag-label" x="300" y="125" text-anchor="middle">direct gaze</text>
+      <!-- Camera -->
+      <rect x="280" y="160" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="300" y="176" text-anchor="middle">camera (85mm)</text>
+      <defs>
+        <linearGradient id="grad_gun_c" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ffd166" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -326,15 +352,21 @@ is what reversal looks like in data.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-warm light
-          |
-    [data printout / monitor]
-    [scores: before vs after]
-         hand or pen in frame
-
-         camera, 50mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 180" style="display:block;">
+      <!-- Light -->
+      <circle cx="310" cy="20" r="8" fill="rgba(255,255,255,0.1)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="335" y="24" fill="#ffd166">warm window light</text>
+      <line x1="310" y1="30" x2="310" y2="60" stroke="#ffd166" stroke-width="1" stroke-dasharray="2 2"/>
+      <!-- Data Printout -->
+      <rect x="240" y="70" width="140" height="60" rx="2" fill="rgba(255,255,255,0.05)" stroke="#fff" stroke-width="1.5"/>
+      <text class="diag-label" x="310" y="100" text-anchor="middle">data / scores</text>
+      <!-- Hand/Pen -->
+      <line x1="260" y1="140" x2="280" y2="105" stroke="#E24B4A" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+      <text class="diag-label" x="250" y="150" text-anchor="middle">pen</text>
+      <!-- Camera -->
+      <rect x="290" y="150" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="166" text-anchor="middle">camera (50mm)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">

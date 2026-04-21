@@ -158,20 +158,27 @@ neuroscience.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-[confocal microscope]
-
-    [monitor: neural imagery]
-        green/blue glow on face
-
-              [Caldwell]
-              3/4 profile
-
-
-
-
-    camera (side angle)  85mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Microscope and Monitor -->
+      <rect x="120" y="30" width="60" height="80" rx="4" fill="rgba(255,255,255,0.03)" stroke="#1D9E75" stroke-width="1"/>
+      <text class="diag-label" x="150" y="60" text-anchor="middle" fill="#1D9E75">monitor</text>
+      <text class="diag-label" x="150" y="80" text-anchor="middle" fill="#1D9E75">green/blue glow</text>
+      <polygon points="180,40 320,50 320,110 180,100" fill="url(#grad_cal_a)" opacity="0.3"/>
+      <!-- Caldwell -->
+      <ellipse cx="340" cy="80" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="340" y="85" text-anchor="middle">Caldwell</text>
+      <text class="diag-label" x="340" y="125" text-anchor="middle">3/4 profile</text>
+      <!-- Camera -->
+      <rect x="320" y="160" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="340" y="176" text-anchor="middle">camera</text>
+      <text class="diag-label" x="340" y="192" text-anchor="middle" fill="#b388ff">85mm (side angle)</text>
+      <defs>
+        <linearGradient id="grad_cal_a" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#1D9E75" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#1D9E75" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -218,13 +225,21 @@ a conceptual still life or a diptych composition.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-directional light
-          |
-    [turtle element]    [brain/neural imagery]
-
-    camera, slight angle, 50mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 180" style="display:block;">
+      <!-- Turtle -->
+      <ellipse cx="220" cy="90" rx="30" ry="20" class="diag-object"/>
+      <text class="diag-label" x="220" y="130" text-anchor="middle">turtle</text>
+      <!-- Brain Imagery -->
+      <rect x="300" y="70" width="60" height="40" rx="4" fill="rgba(255,255,255,0.05)" stroke="#1D9E75" stroke-width="1.5"/>
+      <text class="diag-label" x="330" y="130" text-anchor="middle">brain imagery</text>
+      <!-- Light -->
+      <circle cx="275" cy="20" r="8" fill="rgba(255,255,255,0.1)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="300" y="24" fill="#ffd166">directional light</text>
+      <line x1="275" y1="30" x2="275" y2="60" stroke="#ffd166" stroke-width="1" stroke-dasharray="2 2"/>
+      <!-- Camera -->
+      <rect x="255" y="150" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="275" y="166" text-anchor="middle">camera (50mm)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -272,19 +287,28 @@ for when they need a scientist who doesn't look like a stock photo scientist.</p
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-softbox warm
-    (camera-left)
-                       [lab: microscopes, equipment]
-
-         [Caldwell]
-         direct eye contact
-
-
-
-
-              camera, 85mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 200" style="display:block;">
+      <!-- Softbox -->
+      <rect x="140" y="30" width="20" height="60" rx="2" fill="rgba(255,255,255,0.05)" stroke="#ffd166" stroke-width="1"/>
+      <text class="diag-label" x="120" y="60" text-anchor="end" fill="#ffd166">warm softbox</text>
+      <polygon points="165,40 280,60 280,100 165,80" fill="url(#grad_cal_c)" opacity="0.2"/>
+      <!-- Background -->
+      <rect x="340" y="20" width="120" height="60" rx="4" fill="rgba(255,255,255,0.02)" stroke="#3a4055" stroke-width="1"/>
+      <text class="diag-label" x="400" y="55" text-anchor="middle">lab background</text>
+      <!-- Caldwell -->
+      <ellipse cx="300" cy="80" rx="18" ry="24" class="diag-subject"/>
+      <text class="diag-label" x="300" y="85" text-anchor="middle">Caldwell</text>
+      <!-- Camera -->
+      <rect x="280" y="160" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="300" y="176" text-anchor="middle">camera (85mm)</text>
+      <line x1="300" y1="150" x2="300" y2="110" stroke="#b388ff" stroke-width="0.7" stroke-dasharray="2 3" opacity="0.5"/>
+      <defs>
+        <linearGradient id="grad_cal_c" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ffd166" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
 
   <div class="concept-generated-img">
@@ -332,13 +356,15 @@ visualization as visual art. The image that stops a reader mid-scroll.</p>
 
   <div class="concept-diagram">
     <h5>Setup Diagram</h5>
-    <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; color: #a9b1d6; font-family: monospace; font-size: 12px; overflow-x: auto;">
-[monitor: neural fluorescence image]
-         vivid green/blue pathways
-
-
-    camera, slight angle, 50mm
-    </pre>
+    <svg width="100%" viewBox="0 0 620 160" style="display:block;">
+      <!-- Monitor -->
+      <rect x="200" y="30" width="220" height="80" rx="6" fill="rgba(255,255,255,0.02)" stroke="#1D9E75" stroke-width="1.5"/>
+      <text class="diag-label" x="310" y="60" text-anchor="middle" fill="#1D9E75">monitor</text>
+      <text class="diag-label" x="310" y="80" text-anchor="middle" fill="#1D9E75">vivid green/blue pathways</text>
+      <!-- Camera -->
+      <rect x="290" y="130" width="40" height="24" rx="3" class="diag-camera"/>
+      <text class="diag-label" x="310" y="146" text-anchor="middle">camera (50mm)</text>
+    </svg>
   </div>
 
   <div class="concept-generated-img">

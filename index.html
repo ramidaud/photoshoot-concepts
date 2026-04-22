@@ -651,6 +651,9 @@
     });
   }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
+  const coverWrapper = document.querySelector('.cover-wrapper');
+  if (coverWrapper) observer.observe(coverWrapper);
+
   document.querySelectorAll('.project-card').forEach((card, index) => {
     // Add classes dynamically
     card.classList.add('fade-up', 'spotlight-card');

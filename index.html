@@ -35,6 +35,12 @@
   border-radius: 100px;
   border: 1px solid rgba(76,201,240,0.3);
   margin-top: 16px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.status-indicator:hover {
+  transform: scale(1.05);
 }
 .status-indicator .dot {
   width: 6px;
@@ -136,7 +142,7 @@
   <div class="research-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
     
     <!-- EREN PROJECT CARD -->
-    <a href="Eren/eren-shoot-brief.html" class="concept-card project-card hero">
+    <a href="Eren/eren-shoot-brief.html" id="card-eren" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Eren/images/concept_a.png" alt="THE WORLD'S MOST DESTRUCTIVE LAB Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
       </div>
@@ -152,7 +158,7 @@
     </a>
 
     <!-- BIOFILM PROJECT CARD -->
-    <a href="Biofilm/biofilm-shoot-brief.html" class="concept-card project-card hero">
+    <a href="Biofilm/biofilm-shoot-brief.html" id="card-biofilm" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Biofilm/images/concept_a_nano_banana_2_1773427642042.png" alt="Biofilm Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
       </div>
@@ -168,7 +174,7 @@
     </a>
 
     <!-- PROSTHETICS PROJECT CARD -->
-    <a href="Prosthetics/prosthetics-shoot-brief.html" class="concept-card project-card hero">
+    <a href="Prosthetics/prosthetics-shoot-brief.html" id="card-prosthetics" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Prosthetics/images/prosthetic_concept_cover.png" alt="Prosthetics Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
       </div>
@@ -185,7 +191,7 @@
 
 
     <!-- JOSHUACACHE PROJECT CARD -->
-    <a href="JoshuaCache/joshuacache-shoot-brief.html" class="concept-card project-card hero">
+    <a href="JoshuaCache/joshuacache-shoot-brief.html" id="card-joshuacache" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="JoshuaCache/images/concept_a.png" alt="A CONVERSATION ACROSS TIME (THE JOSHUA CACHE) Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
       </div>
@@ -201,7 +207,7 @@
     </a>
 
     <!-- CALDWELL PROJECT CARD -->
-    <a href="Caldwell/caldwell-shoot-brief.html" class="concept-card project-card hero">
+    <a href="Caldwell/caldwell-shoot-brief.html" id="card-caldwell" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Caldwell/images/concept_a.png" alt="THE BONDING HORMONE Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
       </div>
@@ -217,7 +223,7 @@
     </a>
 
     <!-- GUNSTAD PROJECT CARD -->
-    <a href="Gunstad/gunstad-shoot-brief.html" class="concept-card project-card hero">
+    <a href="Gunstad/gunstad-shoot-brief.html" id="card-gunstad" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Gunstad/images/concept_a.png" alt="THE WEIGHT YOUR BRAIN CARRIES Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
       </div>
@@ -233,7 +239,7 @@
     </a>
 
     <!-- DEXHEIMER PROJECT CARD -->
-    <a href="Dexheimer/dexheimer-shoot-brief.html" class="concept-card project-card hero">
+    <a href="Dexheimer/dexheimer-shoot-brief.html" id="card-dexheimer" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Dexheimer/images/concept_a.png" alt="WHEN NEUTRON STARS COLLIDE Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
       </div>
@@ -249,7 +255,7 @@
     </a>
 
     <!-- LIQUIDCRYSTAL PROJECT CARD -->
-    <a href="LiquidCrystal/liquidcrystal-shoot-brief.html" class="concept-card project-card hero">
+    <a href="LiquidCrystal/liquidcrystal-shoot-brief.html" id="card-liquidcrystal" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="LiquidCrystal/images/concept_a.png" alt="THE LIQUID CRYSTAL LEGACY Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
       </div>
@@ -265,7 +271,7 @@
     </a>
 
     <!-- RASINSKI PROJECT CARD -->
-    <a href="Rasinski/rasinski-shoot-brief.html" class="concept-card project-card hero">
+    <a href="Rasinski/rasinski-shoot-brief.html" id="card-rasinski" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Rasinski/images/concept_a.png" alt="HOW AMERICA READS Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
       </div>
@@ -281,7 +287,7 @@
     </a>
 
     <!-- ADAMS PROJECT CARD -->
-    <a href="Adams/adams-shoot-brief.html" class="concept-card project-card hero">
+    <a href="Adams/adams-shoot-brief.html" id="card-adams" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Adams/images/concept_a.png" alt="INSIDE THE MIND OF TRAUMA Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
       </div>
@@ -297,7 +303,7 @@
     </a>
 
     <!-- COSTELLO PROJECT CARD -->
-    <a href="Costello/costello-shoot-brief.html" class="concept-card project-card hero">
+    <a href="Costello/costello-shoot-brief.html" id="card-costello" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Costello/images/concept_a.png" alt="ANEMIC STREAMS Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
       </div>
@@ -313,7 +319,7 @@
     </a>
 
     <!-- PLACEHOLDER PROJECT CARD -->
-    <a href="_templates/empty_brief.html" class="concept-card project-card doc">
+    <a href="_templates/empty_brief.html" id="card-template" class="concept-card project-card doc">
       <div class="concept-generated-img" style="height: 250px; background: rgba(0,0,0,0.5);">
          <!-- Placeholder empty space for a thumbnail -->
          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" style="margin: auto;">
@@ -342,12 +348,12 @@
 </footer>
 
 <script>
+  // Search Filter Logic
   document.getElementById('projectSearch').addEventListener('input', function(e) {
     const term = e.target.value.toLowerCase();
     const cards = document.querySelectorAll('.project-card');
     
     cards.forEach(card => {
-      // Get text content from the meta area to match against
       const meta = card.querySelector('.concept-meta');
       if (meta) {
         const text = meta.textContent.toLowerCase();
@@ -359,6 +365,51 @@
       }
     });
   });
+
+  // Status Indicator Cycle Logic
+  const STATUS_CYCLE = [
+    { text: 'Standby', color: '#64748b', border: 'rgba(100,116,139,0.3)', bg: 'rgba(100,116,139,0.1)' },
+    { text: 'In Progress', color: 'var(--blue)', border: 'rgba(76,201,240,0.3)', bg: 'rgba(76,201,240,0.1)' },
+    { text: 'Active Production', color: '#f72585', border: 'rgba(247,37,133,0.3)', bg: 'rgba(247,37,133,0.1)' },
+    { text: 'Ready for Review', color: '#f59e0b', border: 'rgba(245,158,11,0.3)', bg: 'rgba(245,158,11,0.1)' },
+    { text: 'Completed', color: 'var(--green)', border: 'rgba(0,229,160,0.3)', bg: 'rgba(0,229,160,0.1)' }
+  ];
+
+  document.querySelectorAll('.status-indicator').forEach(indicator => {
+    const cardId = indicator.closest('.project-card').id;
+    if (!cardId) return;
+
+    // Load from local storage
+    const savedStatus = localStorage.getItem('status_' + cardId);
+    if (savedStatus) {
+      const statusData = JSON.parse(savedStatus);
+      applyStatus(indicator, statusData);
+    }
+
+    // Handle click
+    indicator.addEventListener('click', (e) => {
+      e.preventDefault(); // Stop link navigation
+      e.stopPropagation();
+
+      const currentText = indicator.querySelector('span').innerText;
+      let currentIndex = STATUS_CYCLE.findIndex(s => s.text === currentText);
+      
+      let nextIndex = (currentIndex + 1) % STATUS_CYCLE.length;
+      const nextStatus = STATUS_CYCLE[nextIndex];
+
+      applyStatus(indicator, nextStatus);
+      localStorage.setItem('status_' + cardId, JSON.stringify(nextStatus));
+    });
+  });
+
+  function applyStatus(indicator, statusData) {
+    indicator.querySelector('span').innerText = statusData.text;
+    indicator.querySelector('span').style.color = statusData.color;
+    indicator.style.borderColor = statusData.border;
+    indicator.style.background = statusData.bg;
+    indicator.querySelector('.dot').style.background = statusData.color;
+    indicator.querySelector('.dot').style.boxShadow = `0 0 10px ${statusData.color}`;
+  }
 </script>
 
 </body>

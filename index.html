@@ -132,6 +132,8 @@
 
 /* ── TELEMETRY PANEL ────────────────────────────────────── */
 .cover-wrapper {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 64px;
@@ -223,7 +225,7 @@
 <body>
 
 <div class="cover">
-  <div class="cover-wrapper fade-up">
+  <div class="cover-wrapper">
     <!-- TELEMETRY PANEL -->
     <div class="telemetry-panel">
       <div class="telemetry-block">

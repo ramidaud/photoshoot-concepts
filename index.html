@@ -43,6 +43,58 @@
   background: var(--blue);
   box-shadow: 0 0 10px var(--blue);
 }
+
+/* Hover Effects & Interactivity */
+.project-card {
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+.project-card .concept-generated-img {
+  overflow: hidden;
+}
+.project-card img {
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.project-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Search Filter */
+.search-container {
+  margin-bottom: 32px;
+  position: relative;
+}
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  background: var(--bg2);
+  border: 1px solid var(--border1);
+  color: var(--text1);
+  padding: 12px 20px 12px 40px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.search-input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(76,201,240,0.2);
+}
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  stroke: var(--text2);
+  pointer-events: none;
+}
 </style>
 </head>
 <body>
@@ -68,8 +120,32 @@
     <h2>Active Photoshoots</h2>
   </div>
 
-  <div class="research-grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+  <div class="search-container">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input type="text" id="projectSearch" class="search-input" placeholder="Search by project, division, or status...">
+  </div>
+
+  <div class="research-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
     
+    <!-- EREN PROJECT CARD -->
+    <a href="Eren/eren-shoot-brief.html" class="concept-card project-card hero">
+      <div class="concept-generated-img" style="height: 250px;">
+        <img src="Eren/images/concept_a.png" alt="THE WORLD'S MOST DESTRUCTIVE LAB Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
+      </div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">Experimental Archaeology</div>
+        <h3 class="concept-title">THE WORLD'S MOST DESTRUCTIVE LAB</h3>
+        <p class="concept-tagline">11 Shot Concepts</p>
+        <div class="status-indicator">
+          <div class="dot" style="background: var(--blue); box-shadow: 0 0 10px var(--blue);"></div>
+          <span style="color: var(--blue);">Pilot Episode</span>
+        </div>
+      </div>
+    </a>
+
     <!-- BIOFILM PROJECT CARD -->
     <a href="Biofilm/biofilm-shoot-brief.html" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
@@ -102,21 +178,6 @@
       </div>
     </a>
 
-    <!-- EREN PROJECT CARD -->
-    <a href="Eren/eren-shoot-brief.html" class="concept-card project-card hero">
-      <div class="concept-generated-img" style="height: 250px;">
-        <img src="Eren/images/concept_a.png" alt="THE WORLD'S MOST DESTRUCTIVE LAB Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
-      </div>
-      <div class="concept-meta">
-        <div class="concept-type-badge">Experimental Archaeology</div>
-        <h3 class="concept-title">THE WORLD'S MOST DESTRUCTIVE LAB</h3>
-        <p class="concept-tagline">11 Shot Concepts</p>
-        <div class="status-indicator">
-          <div class="dot" style="background: var(--blue); box-shadow: 0 0 10px var(--blue);"></div>
-          <span style="color: var(--blue);">Pilot Episode</span>
-        </div>
-      </div>
-    </a>
 
     <!-- JOSHUACACHE PROJECT CARD -->
     <a href="JoshuaCache/joshuacache-shoot-brief.html" class="concept-card project-card hero">
@@ -274,6 +335,26 @@
   <div>UCM·SCI © 2025 // Photoshoot Architecture</div>
   <div>Sys_Arch // v2.0</div>
 </footer>
+
+<script>
+  document.getElementById('projectSearch').addEventListener('input', function(e) {
+    const term = e.target.value.toLowerCase();
+    const cards = document.querySelectorAll('.project-card');
+    
+    cards.forEach(card => {
+      // Get text content from the meta area to match against
+      const meta = card.querySelector('.concept-meta');
+      if (meta) {
+        const text = meta.textContent.toLowerCase();
+        if (text.includes(term)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    });
+  });
+</script>
 
 </body>
 </html>

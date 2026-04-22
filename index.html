@@ -458,6 +458,36 @@
     indicator.querySelector('.dot').style.background = statusData.color;
     indicator.querySelector('.dot').style.boxShadow = `0 0 10px ${statusData.color}`;
   }
+
+  // Cinematic Scroll & Spotlight Logic
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+  document.querySelectorAll('.project-card').forEach((card, index) => {
+    // Add classes dynamically
+    card.classList.add('fade-up', 'spotlight-card');
+    
+    // Stagger delay based on grid index (mod 3 for columns)
+    const delayClass = `delay-${(index % 3) + 1}`;
+    card.classList.add(delayClass);
+    
+    observer.observe(card);
+
+    // Spotlight mouse tracking
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
 </script>
 
 </body>

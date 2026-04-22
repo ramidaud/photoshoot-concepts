@@ -814,5 +814,36 @@ strong top-down light. The sheer quantity of chips tells the story of iteration.
   <span>Photography: Rami Daud</span>
 </div>
 
+<script>
+  // Cinematic Scroll & Spotlight Logic
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+  const animatedElements = document.querySelectorAll('.concept-card, .info-card, .info-card-full, .stat-card, .action-group');
+  
+  animatedElements.forEach((el, index) => {
+    el.classList.add('fade-up', 'spotlight-card');
+    
+    if (el.classList.contains('stat-card') || el.classList.contains('action-group')) {
+      el.classList.add(`delay-${(index % 3) + 1}`);
+    }
+    
+    observer.observe(el);
+
+    el.addEventListener('mousemove', e => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      el.style.setProperty('--mouse-x', `${x}px`);
+      el.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+</script>
+
 </body>
 </html>

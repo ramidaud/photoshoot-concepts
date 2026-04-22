@@ -268,10 +268,7 @@
 </div>
 
 <main class="page dashboard-page">
-  <div class="section-label">
-    <div class="section-num">01</div>
-    <h2>Active Photoshoots</h2>
-  </div>
+  
 
   <div class="search-container">
     <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -281,9 +278,14 @@
     <input type="text" id="projectSearch" class="search-input" placeholder="Search by project, division, or status...">
   </div>
 
-  <div class="research-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
-    
-    <!-- EREN PROJECT CARD -->
+  
+  <div class="category-section" id="section-field_notes" style="margin-bottom: 80px;">
+    <div class="section-label" style="margin-bottom: 24px;">
+      <div class="section-num">01</div>
+      <h2 style="display:flex; align-items:baseline; gap:16px;">Field Notes <span style="opacity:0.5; font-size:12px; font-weight:normal; letter-spacing:0.1em; text-transform:uppercase;">Documentary & Expeditions</span></h2>
+    </div>
+    <div class="research-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+<!-- EREN PROJECT CARD -->
     <a href="Eren/eren-shoot-brief.html" id="card-eren" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Eren/images/concept_a.png" alt="THE WORLD'S MOST DESTRUCTIVE LAB Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
@@ -299,40 +301,7 @@
       </div>
     </a>
 
-    <!-- BIOFILM PROJECT CARD -->
-    <a href="Biofilm/biofilm-shoot-brief.html" id="card-biofilm" class="concept-card project-card hero">
-      <div class="concept-generated-img" style="height: 250px;">
-        <img src="Biofilm/images/concept_a_nano_banana_2_1773427642042.png" alt="Biofilm Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
-      </div>
-      <div class="concept-meta">
-        <div class="concept-type-badge">Dept of Chemistry</div>
-        <h3 class="concept-title">Biofilm Eradication</h3>
-        <p class="concept-tagline">10 Shot Concepts • Fluorescence Microscopy & Nanoparticles</p>
-        <div class="status-indicator">
-          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
-          <span style="color: var(--green);">Ready for Review</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- PROSTHETICS PROJECT CARD -->
-    <a href="Prosthetics/prosthetics-shoot-brief.html" id="card-prosthetics" class="concept-card project-card hero">
-      <div class="concept-generated-img" style="height: 250px;">
-        <img src="Prosthetics/images/prosthetic_concept_cover.png" alt="Prosthetics Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
-      </div>
-      <div class="concept-meta">
-        <div class="concept-type-badge">Biomedical Engineering</div>
-        <h3 class="concept-title">Advanced Prosthetics</h3>
-        <p class="concept-tagline">3 Shot Concepts • Cybernetics & Neural Interfaces</p>
-        <div class="status-indicator">
-          <div class="dot" style="background: var(--blue); box-shadow: 0 0 10px var(--blue);"></div>
-          <span style="color: var(--blue);">In Progress</span>
-        </div>
-      </div>
-    </a>
-
-
-    <!-- JOSHUACACHE PROJECT CARD -->
+<!-- JOSHUACACHE PROJECT CARD -->
     <a href="JoshuaCache/joshuacache-shoot-brief.html" id="card-joshuacache" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="JoshuaCache/images/concept_a.png" alt="A CONVERSATION ACROSS TIME (THE JOSHUA CACHE) Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
@@ -348,103 +317,7 @@
       </div>
     </a>
 
-    <!-- CALDWELL PROJECT CARD -->
-    <a href="Caldwell/caldwell-shoot-brief.html" id="card-caldwell" class="concept-card project-card hero">
-      <div class="concept-generated-img" style="height: 250px;">
-        <img src="Caldwell/images/concept_a.png" alt="THE BONDING HORMONE Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
-      </div>
-      <div class="concept-meta">
-        <div class="concept-type-badge">Biological Sciences</div>
-        <h3 class="concept-title">THE BONDING HORMONE</h3>
-        <p class="concept-tagline">6 Shot Concepts</p>
-        <div class="status-indicator">
-          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
-          <span style="color: var(--green);">Season 1 Candidate</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- GUNSTAD PROJECT CARD -->
-    <a href="Gunstad/gunstad-shoot-brief.html" id="card-gunstad" class="concept-card project-card hero">
-      <div class="concept-generated-img" style="height: 250px;">
-        <img src="Gunstad/images/concept_a.png" alt="THE WEIGHT YOUR BRAIN CARRIES Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
-      </div>
-      <div class="concept-meta">
-        <div class="concept-type-badge">Psychological Sciences</div>
-        <h3 class="concept-title">THE WEIGHT YOUR BRAIN CARRIES</h3>
-        <p class="concept-tagline">6 Shot Concepts</p>
-        <div class="status-indicator">
-          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
-          <span style="color: var(--green);">Season 1 Candidate</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- DEXHEIMER PROJECT CARD -->
-    <a href="Dexheimer/dexheimer-shoot-brief.html" id="card-dexheimer" class="concept-card project-card hero">
-      <div class="concept-generated-img" style="height: 250px;">
-        <img src="Dexheimer/images/concept_a.png" alt="WHEN NEUTRON STARS COLLIDE Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
-      </div>
-      <div class="concept-meta">
-        <div class="concept-type-badge">Physics</div>
-        <h3 class="concept-title">WHEN NEUTRON STARS COLLIDE</h3>
-        <p class="concept-tagline">6 Shot Concepts</p>
-        <div class="status-indicator">
-          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
-          <span style="color: var(--green);">Season 1 Candidate</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- LIQUIDCRYSTAL PROJECT CARD -->
-    <a href="LiquidCrystal/liquidcrystal-shoot-brief.html" id="card-liquidcrystal" class="concept-card project-card hero">
-      <div class="concept-generated-img" style="height: 250px;">
-        <img src="LiquidCrystal/images/concept_a.png" alt="THE LIQUID CRYSTAL LEGACY Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
-      </div>
-      <div class="concept-meta">
-        <div class="concept-type-badge">College of Arts & Sciences</div>
-        <h3 class="concept-title">THE LIQUID CRYSTAL LEGACY</h3>
-        <p class="concept-tagline">6 Shot Concepts</p>
-        <div class="status-indicator">
-          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
-          <span style="color: var(--green);">Season 1 Candidate</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- RASINSKI PROJECT CARD -->
-    <a href="Rasinski/rasinski-shoot-brief.html" id="card-rasinski" class="concept-card project-card hero">
-      <div class="concept-generated-img" style="height: 250px;">
-        <img src="Rasinski/images/concept_a.png" alt="HOW AMERICA READS Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
-      </div>
-      <div class="concept-meta">
-        <div class="concept-type-badge">Educational Foundations</div>
-        <h3 class="concept-title">HOW AMERICA READS</h3>
-        <p class="concept-tagline">6 Shot Concepts</p>
-        <div class="status-indicator">
-          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
-          <span style="color: var(--green);">Season 1 Candidate</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- ADAMS PROJECT CARD -->
-    <a href="Adams/adams-shoot-brief.html" id="card-adams" class="concept-card project-card hero">
-      <div class="concept-generated-img" style="height: 250px;">
-        <img src="Adams/images/concept_a.png" alt="INSIDE THE MIND OF TRAUMA Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
-      </div>
-      <div class="concept-meta">
-        <div class="concept-type-badge">Sociology</div>
-        <h3 class="concept-title">INSIDE THE MIND OF TRAUMA</h3>
-        <p class="concept-tagline">6 Shot Concepts</p>
-        <div class="status-indicator">
-          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
-          <span style="color: var(--green);">Season 1 Candidate</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- COSTELLO PROJECT CARD -->
+<!-- COSTELLO PROJECT CARD -->
     <a href="Costello/costello-shoot-brief.html" id="card-costello" class="concept-card project-card hero">
       <div class="concept-generated-img" style="height: 250px;">
         <img src="Costello/images/concept_a.png" alt="ANEMIC STREAMS Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
@@ -460,7 +333,162 @@
       </div>
     </a>
 
-    <!-- PLACEHOLDER PROJECT CARD -->
+    </div>
+  </div>
+
+  <div class="category-section" id="section-lab_spotlights" style="margin-bottom: 80px;">
+    <div class="section-label" style="margin-bottom: 24px;">
+      <div class="section-num">02</div>
+      <h2 style="display:flex; align-items:baseline; gap:16px;">Lab Spotlights <span style="opacity:0.5; font-size:12px; font-weight:normal; letter-spacing:0.1em; text-transform:uppercase;">Tech & Innovation</span></h2>
+    </div>
+    <div class="research-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+<!-- BIOFILM PROJECT CARD -->
+    <a href="Biofilm/biofilm-shoot-brief.html" id="card-biofilm" class="concept-card project-card hero">
+      <div class="concept-generated-img" style="height: 250px;">
+        <img src="Biofilm/images/concept_a_nano_banana_2_1773427642042.png" alt="Biofilm Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+      </div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">Dept of Chemistry</div>
+        <h3 class="concept-title">Biofilm Eradication</h3>
+        <p class="concept-tagline">10 Shot Concepts • Fluorescence Microscopy & Nanoparticles</p>
+        <div class="status-indicator">
+          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
+          <span style="color: var(--green);">Ready for Review</span>
+        </div>
+      </div>
+    </a>
+
+<!-- PROSTHETICS PROJECT CARD -->
+    <a href="Prosthetics/prosthetics-shoot-brief.html" id="card-prosthetics" class="concept-card project-card hero">
+      <div class="concept-generated-img" style="height: 250px;">
+        <img src="Prosthetics/images/prosthetic_concept_cover.png" alt="Prosthetics Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
+      </div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">Biomedical Engineering</div>
+        <h3 class="concept-title">Advanced Prosthetics</h3>
+        <p class="concept-tagline">3 Shot Concepts • Cybernetics & Neural Interfaces</p>
+        <div class="status-indicator">
+          <div class="dot" style="background: var(--blue); box-shadow: 0 0 10px var(--blue);"></div>
+          <span style="color: var(--blue);">In Progress</span>
+        </div>
+      </div>
+    </a>
+
+<!-- LIQUIDCRYSTAL PROJECT CARD -->
+    <a href="LiquidCrystal/liquidcrystal-shoot-brief.html" id="card-liquidcrystal" class="concept-card project-card hero">
+      <div class="concept-generated-img" style="height: 250px;">
+        <img src="LiquidCrystal/images/concept_a.png" alt="THE LIQUID CRYSTAL LEGACY Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
+      </div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">College of Arts & Sciences</div>
+        <h3 class="concept-title">THE LIQUID CRYSTAL LEGACY</h3>
+        <p class="concept-tagline">6 Shot Concepts</p>
+        <div class="status-indicator">
+          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
+          <span style="color: var(--green);">Season 1 Candidate</span>
+        </div>
+      </div>
+    </a>
+
+    </div>
+  </div>
+
+  <div class="category-section" id="section-faculty_profiles" style="margin-bottom: 80px;">
+    <div class="section-label" style="margin-bottom: 24px;">
+      <div class="section-num">03</div>
+      <h2 style="display:flex; align-items:baseline; gap:16px;">Faculty Profiles <span style="opacity:0.5; font-size:12px; font-weight:normal; letter-spacing:0.1em; text-transform:uppercase;">Conceptual Portraiture</span></h2>
+    </div>
+    <div class="research-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+<!-- CALDWELL PROJECT CARD -->
+    <a href="Caldwell/caldwell-shoot-brief.html" id="card-caldwell" class="concept-card project-card hero">
+      <div class="concept-generated-img" style="height: 250px;">
+        <img src="Caldwell/images/concept_a.png" alt="THE BONDING HORMONE Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
+      </div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">Biological Sciences</div>
+        <h3 class="concept-title">THE BONDING HORMONE</h3>
+        <p class="concept-tagline">6 Shot Concepts</p>
+        <div class="status-indicator">
+          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
+          <span style="color: var(--green);">Season 1 Candidate</span>
+        </div>
+      </div>
+    </a>
+
+<!-- GUNSTAD PROJECT CARD -->
+    <a href="Gunstad/gunstad-shoot-brief.html" id="card-gunstad" class="concept-card project-card hero">
+      <div class="concept-generated-img" style="height: 250px;">
+        <img src="Gunstad/images/concept_a.png" alt="THE WEIGHT YOUR BRAIN CARRIES Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
+      </div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">Psychological Sciences</div>
+        <h3 class="concept-title">THE WEIGHT YOUR BRAIN CARRIES</h3>
+        <p class="concept-tagline">6 Shot Concepts</p>
+        <div class="status-indicator">
+          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
+          <span style="color: var(--green);">Season 1 Candidate</span>
+        </div>
+      </div>
+    </a>
+
+<!-- DEXHEIMER PROJECT CARD -->
+    <a href="Dexheimer/dexheimer-shoot-brief.html" id="card-dexheimer" class="concept-card project-card hero">
+      <div class="concept-generated-img" style="height: 250px;">
+        <img src="Dexheimer/images/concept_a.png" alt="WHEN NEUTRON STARS COLLIDE Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
+      </div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">Physics</div>
+        <h3 class="concept-title">WHEN NEUTRON STARS COLLIDE</h3>
+        <p class="concept-tagline">6 Shot Concepts</p>
+        <div class="status-indicator">
+          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
+          <span style="color: var(--green);">Season 1 Candidate</span>
+        </div>
+      </div>
+    </a>
+
+<!-- RASINSKI PROJECT CARD -->
+    <a href="Rasinski/rasinski-shoot-brief.html" id="card-rasinski" class="concept-card project-card hero">
+      <div class="concept-generated-img" style="height: 250px;">
+        <img src="Rasinski/images/concept_a.png" alt="HOW AMERICA READS Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
+      </div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">Educational Foundations</div>
+        <h3 class="concept-title">HOW AMERICA READS</h3>
+        <p class="concept-tagline">6 Shot Concepts</p>
+        <div class="status-indicator">
+          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
+          <span style="color: var(--green);">Season 1 Candidate</span>
+        </div>
+      </div>
+    </a>
+
+<!-- ADAMS PROJECT CARD -->
+    <a href="Adams/adams-shoot-brief.html" id="card-adams" class="concept-card project-card hero">
+      <div class="concept-generated-img" style="height: 250px;">
+        <img src="Adams/images/concept_a.png" alt="INSIDE THE MIND OF TRAUMA Cover" style="width: 100%; height: 100%; object-fit: cover; object-position: center 50%;">
+      </div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">Sociology</div>
+        <h3 class="concept-title">INSIDE THE MIND OF TRAUMA</h3>
+        <p class="concept-tagline">6 Shot Concepts</p>
+        <div class="status-indicator">
+          <div class="dot" style="background: var(--green); box-shadow: 0 0 10px var(--green);"></div>
+          <span style="color: var(--green);">Season 1 Candidate</span>
+        </div>
+      </div>
+    </a>
+
+    </div>
+  </div>
+
+  <div class="category-section" id="section-internal" style="margin-bottom: 80px;">
+    <div class="section-label" style="margin-bottom: 24px;">
+      <div class="section-num">04</div>
+      <h2 style="display:flex; align-items:baseline; gap:16px;">Internal Resources <span style="opacity:0.5; font-size:12px; font-weight:normal; letter-spacing:0.1em; text-transform:uppercase;">Templates & Architecture</span></h2>
+    </div>
+    <div class="research-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+<!-- PLACEHOLDER PROJECT CARD -->
     <a href="_templates/empty_brief.html" id="card-template" class="concept-card project-card doc">
       <div class="concept-generated-img" style="height: 250px; background: rgba(0,0,0,0.5);">
          <!-- Placeholder empty space for a thumbnail -->
@@ -481,6 +509,7 @@
       </div>
     </a>
 
+    </div>
   </div>
 </main>
 
@@ -493,18 +522,26 @@
   // Search Filter Logic
   document.getElementById('projectSearch').addEventListener('input', function(e) {
     const term = e.target.value.toLowerCase();
-    const cards = document.querySelectorAll('.project-card');
+    const sections = document.querySelectorAll('.category-section');
     
-    cards.forEach(card => {
-      const meta = card.querySelector('.concept-meta');
-      if (meta) {
-        const text = meta.textContent.toLowerCase();
-        if (text.includes(term)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
+    sections.forEach(section => {
+      const cards = section.querySelectorAll('.project-card');
+      let sectionHasVisibleCards = false;
+
+      cards.forEach(card => {
+        const meta = card.querySelector('.concept-meta');
+        if (meta) {
+          const text = meta.textContent.toLowerCase();
+          if (text.includes(term)) {
+            card.style.display = 'block';
+            sectionHasVisibleCards = true;
+          } else {
+            card.style.display = 'none';
+          }
         }
-      }
+      });
+
+      section.style.display = sectionHasVisibleCards ? 'block' : 'none';
     });
   });
 

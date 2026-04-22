@@ -220,6 +220,117 @@
   border-radius: 4px;
   border: 1px solid var(--border2);
 }
+
+/* ── INITIALIZE SHOOT WIZARD ── */
+.fab {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #000;
+  border: none;
+  box-shadow: 0 4px 20px var(--green-glow);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.2s;
+}
+.fab:hover {
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 8px 30px var(--green-glow);
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-content {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: var(--glass-shadow);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-overlay.active .modal-content {
+  transform: translateY(0) scale(1);
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 24px;
+  cursor: pointer;
+}
+.modal-close:hover { color: #fff; }
+.form-group {
+  margin-bottom: 16px;
+}
+.form-group label {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.form-group input, .form-group select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+}
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+  border-color: var(--green);
+}
+.wiz-btn {
+  width: 100%;
+  background: var(--green);
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.2s;
+}
+.wiz-btn:hover { opacity: 0.9; }
+
 </style>
 </head>
 <body>
@@ -482,35 +593,65 @@
     </div>
   </div>
 
-  <div class="category-section" id="section-internal" style="margin-bottom: 80px;">
-    <div class="section-label" style="margin-bottom: 24px;">
-      <div class="section-num">04</div>
-      <h2 style="display:flex; align-items:baseline; gap:16px;">Internal Resources <span style="opacity:0.5; font-size:12px; font-weight:normal; letter-spacing:0.1em; text-transform:uppercase;">Templates & Architecture</span></h2>
-    </div>
-    <div class="research-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
-<!-- PLACEHOLDER PROJECT CARD -->
-    <a href="_templates/empty_brief.html" id="card-template" class="concept-card project-card doc">
-      <div class="concept-generated-img" style="height: 250px; background: rgba(0,0,0,0.5);">
-         <!-- Placeholder empty space for a thumbnail -->
-         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" style="margin: auto;">
-           <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-           <circle cx="8.5" cy="8.5" r="1.5"></circle>
-           <polyline points="21 15 16 10 5 21"></polyline>
-         </svg>
+  >
+
+  <!-- INITIALIZE SHOOT WIZARD -->
+  <button id="fab-init-shoot" class="fab" title="Initialize New Shoot">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+    </svg>
+  </button>
+
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close">&times;</button>
+      <h2 style="margin-bottom: 8px; font-family: var(--font-display); color: var(--green); text-transform: uppercase; letter-spacing: 0.1em; font-size: 16px;">Initialize New Shoot</h2>
+      <p style="color: var(--muted); margin-bottom: 24px; font-size: 13px;">Scaffold a new project brief and generate dashboard HTML.</p>
+      
+      <div class="form-group">
+        <label>Folder / Directory Name</label>
+        <input type="text" id="wiz-id" placeholder="e.g. SpaceShoot (no spaces)">
       </div>
-      <div class="concept-meta">
-        <div class="concept-type-badge">New Division</div>
-        <h3 class="concept-title">Project Template</h3>
-        <p class="concept-tagline">Blank blueprint for generating future shoot concepts</p>
-        <div class="status-indicator">
-          <div class="dot"></div>
-          <span>Standby</span>
+      <div class="form-group">
+        <label>Project Title</label>
+        <input type="text" id="wiz-title" placeholder="e.g. THE GRAVITY WELL">
+      </div>
+      <div class="form-group">
+        <label>Category (Dashboard Section)</label>
+        <select id="wiz-category">
+          <option value="field-notes">Field Notes</option>
+          <option value="lab-spotlights">Lab Spotlights</option>
+          <option value="faculty-profiles">Faculty Profiles</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tagline / Details</label>
+        <input type="text" id="wiz-tagline" placeholder="e.g. 4 Shot Concepts • Physics Dept">
+      </div>
+      <div class="form-group">
+        <label>Badge Title (Scientific Domain)</label>
+        <input type="text" id="wiz-badge" placeholder="e.g. Astrophysics">
+      </div>
+      
+      <button id="wiz-generate" class="wiz-btn">Generate Project Assets</button>
+
+      <div id="wiz-output" style="display:none; margin-top: 24px;">
+        <hr style="border:0; border-top: 1px solid var(--border2); margin-bottom: 24px;">
+        <h3 style="font-size: 14px; margin-bottom: 12px; color: var(--text);">1. Download Pre-filled Brief</h3>
+        <p style="font-size: 12px; color: var(--muted); margin-bottom: 12px;">Create a folder named <strong><span id="out-folder"></span></strong> and place this file inside it.</p>
+        <button id="wiz-download" class="wiz-btn" style="background: transparent; border: 1px solid var(--blue); color: var(--blue);">Download shoot-brief.html</button>
+
+        <h3 style="font-size: 14px; margin-top: 24px; margin-bottom: 12px; color: var(--text);">2. Dashboard Card Code</h3>
+        <p style="font-size: 12px; color: var(--muted); margin-bottom: 12px;">Copy this code and paste it inside the <code>index.html</code> file, directly under the <code>&lt;div class="research-grid"&gt;</code> for the category you selected.</p>
+        <div style="position: relative;">
+          <textarea id="wiz-code" readonly style="width: 100%; height: 150px; background: var(--bg); color: var(--text); font-family: monospace; font-size: 11px; padding: 12px; border: 1px solid var(--border2); border-radius: 4px; resize: vertical;"></textarea>
+          <button id="wiz-copy" style="position: absolute; top: 8px; right: 8px; background: var(--surface2); color: var(--text); border: 1px solid var(--border2); padding: 4px 8px; border-radius: 4px; font-size: 10px; cursor: pointer;">Copy Code</button>
         </div>
       </div>
-    </a>
-
     </div>
   </div>
+
 </main>
 
 <footer class="footer">
@@ -680,6 +821,195 @@
 
   // Initialize telemetry on load
   updateTelemetryDashboard();
+
+  
+  // ── WIZARD LOGIC ──
+  const fab = document.getElementById('fab-init-shoot');
+  const modal = document.getElementById('modal-overlay');
+  const closeBtn = document.getElementById('modal-close');
+  const generateBtn = document.getElementById('wiz-generate');
+  const outputDiv = document.getElementById('wiz-output');
+  const copyBtn = document.getElementById('wiz-copy');
+  const dlBtn = document.getElementById('wiz-download');
+  let generatedBlobUrl = null;
+
+  fab.addEventListener('click', () => modal.classList.add('active'));
+  closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal) modal.classList.remove('active');
+  });
+
+  generateBtn.addEventListener('click', () => {
+    const id = document.getElementById('wiz-id').value.trim() || 'NewShoot';
+    const title = document.getElementById('wiz-title').value.trim() || 'UNTITLED SHOOT';
+    const tagline = document.getElementById('wiz-tagline').value.trim() || 'Brief Details';
+    const badge = document.getElementById('wiz-badge').value.trim() || 'New Division';
+    
+    // 1. Generate Card Code
+    const cardHtml = `
+    <!-- ${id.toUpperCase()} PROJECT CARD -->
+    <a href="${id}/${id.toLowerCase()}-shoot-brief.html" id="card-${id.toLowerCase()}" class="concept-card project-card hero">
+      <div class="concept-generated-img" style="height: 250px; background: rgba(0,0,0,0.5);">
+         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" style="margin: auto; display:block; padding-top: 100px;">
+           <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+           <circle cx="8.5" cy="8.5" r="1.5"></circle>
+           <polyline points="21 15 16 10 5 21"></polyline>
+         </svg>
+      </div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">${badge}</div>
+        <h3 class="concept-title">${title}</h3>
+        <p class="concept-tagline">${tagline}</p>
+        <div class="status-indicator">
+          <div class="dot"></div>
+          <span>Standby</span>
+        </div>
+      </div>
+    </a>`;
+    
+    document.getElementById('wiz-code').value = cardHtml;
+    document.getElementById('out-folder').innerText = id;
+    
+    // 2. Generate Brief File (Blob)
+    const rawTemplate = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoot Brief Template — Command Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+
+<div style="padding: 40px 48px 0; max-width: 1100px; margin: 0 auto;">
+  <a href="../index.html" style="color: var(--green); text-decoration: none; font-family: var(--font-display); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 4px; transition: color 0.2s ease;">← Back to Command Center</a>
+</div>
+
+<!-- ══ COVER ══════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-content">
+    <div class="cover-meta">
+      [Doc Code] <span>/</span> [Organization] <span>/</span> [Department] 
+    </div>
+    <h1>Photography Brief:<br><em>[Project Title]</em></h1>
+    <div class="cover-tag"><span class="pulse-dot"></span> [X] Shot Concepts · AI Prompts Included</div>
+    <div class="cover-sub">
+      <div><strong>Faculty/Subject</strong><br>[Name]</div>
+      <div><strong>Location</strong><br>[Building / Lab]</div>
+      <div><strong>Funding</strong><br>[Grant Info]</div>
+      <div><strong>Date</strong><br>[Month Year]</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MAIN RESEARCH / CONTEXT ════════════════════════════ -->
+<main class="page">
+  <div class="section-label">
+    <div class="section-num">01</div>
+    <h2>Project Context</h2>
+  </div>
+
+  <div class="research-grid">
+    <div class="info-card">
+      <h3>The Challenge / Hypothesis</h3>
+      <p>[Explain the core scientific or thematic challenge being researched or highlighted in this shoot.]</p>
+    </div>
+    <div class="info-card">
+      <h3>The Solution / Innovation</h3>
+      <p>[Explain the novel approach or discovery being made by the subjects.]</p>
+    </div>
+  </div>
+
+<!-- ══ SHOT CONCEPTS ══════════════════════════════════════ -->
+  <div class="section-label">
+    <div class="section-num">02</div>
+    <h2>Shot Concepts</h2>
+  </div>
+
+  <div class="type-divider hero">
+    <h3>Concept Category (e.g., Posed / Hero)</h3>
+  </div>
+
+  <!-- CONCEPT A -->
+  <div class="concept-card hero" id="concept-a">
+    <div class="concept-header">
+      <div class="concept-num">A</div>
+      <div class="concept-meta">
+        <div class="concept-type-badge">Primary Hero Shot</div>
+        <div class="concept-title">[Shot Title]</div>
+        <div class="concept-tagline">[One sentence summary of the shot's goal]</div>
+      </div>
+    </div>
+
+    <div class="concept-body">
+      <div class="concept-desc">
+        <p>[Describe the visual direction, composition, framing, and mood in detail.]</p>
+        <ul>
+          <li>[Key compositional note]</li>
+          <li>[Lighting or interaction note]</li>
+        </ul>
+      </div>
+      
+      <div class="concept-tech">
+        <h5>Technical Notes</h5>
+        <div class="tech-line"><span class="tech-key">Aperture</span><span class="tech-val">[f-stop]</span></div>
+        <div class="tech-line"><span class="tech-key">Focal Length</span><span class="tech-val">[mm]</span></div>
+        <div class="tech-line"><span class="tech-key">Focus Element</span><span class="tech-val">[Subject]</span></div>
+        <div class="tech-line"><span class="tech-key">Key Light</span><span class="tech-val">[Lighting Setup]</span></div>
+      </div>
+    </div>
+    
+    <!-- AI GENERATED IMAGE -->
+    <!--
+    <div class="concept-generated-img">
+      <img src="images/placeholder.png" alt="Concept Image">
+    </div>
+    -->
+
+    <div class="concept-prompt">
+      <h5>AI Visualization Prompt — <span>[Style]</span></h5>
+      <div class="prompt-text">[Paste the Midjourney prompt here to generate the visual representation of this shot.]</div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div>UCM·SCI © 2025 // Photoshoot Architecture</div>
+  <div>Sys_Arch // v2.0</div>
+</footer>
+
+</body>
+</html>
+`;
+    const finalFileHtml = rawTemplate.replace(/\[Project Title\]/g, title).replace(/\[Name\]/g, badge);
+    
+    if (generatedBlobUrl) URL.revokeObjectURL(generatedBlobUrl);
+    const blob = new Blob([finalFileHtml], { type: 'text/html' });
+    generatedBlobUrl = URL.createObjectURL(blob);
+    
+    dlBtn.onclick = () => {
+      const a = document.createElement('a');
+      a.href = generatedBlobUrl;
+      a.download = `${id.toLowerCase()}-shoot-brief.html`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    };
+
+    outputDiv.style.display = 'block';
+  });
+
+  copyBtn.addEventListener('click', () => {
+    const code = document.getElementById('wiz-code');
+    code.select();
+    document.execCommand('copy');
+    copyBtn.innerText = 'Copied!';
+    setTimeout(() => copyBtn.innerText = 'Copy Code', 2000);
+  });
 
   // Cinematic Scroll & Spotlight Logic
   const observer = new IntersectionObserver((entries) => {

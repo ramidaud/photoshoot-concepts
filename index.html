@@ -22,25 +22,48 @@
   padding: 32px;
 }
 .status-indicator {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-display);
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--blue);
   background: rgba(76,201,240,0.1);
   padding: 6px 16px;
   border-radius: 100px;
   border: 1px solid rgba(76,201,240,0.3);
   margin-top: 16px;
-  cursor: pointer;
-  user-select: none;
   transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .status-indicator:hover {
   transform: scale(1.05);
+}
+.status-select {
+  background: transparent;
+  border: none;
+  color: var(--blue);
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 12px;
+}
+.status-select option {
+  background: var(--bg);
+  color: #fff;
+  font-family: var(--font-sans);
+  text-transform: none;
+  letter-spacing: normal;
+}
+.status-indicator::after {
+  content: '▼';
+  position: absolute;
+  right: 14px;
+  font-size: 7px;
+  color: inherit;
+  opacity: 0.5;
+  pointer-events: none;
 }
 .status-indicator .dot {
   width: 6px;
@@ -366,12 +389,14 @@
     });
   });
 
-  // Status Indicator Cycle Logic
+  // Status Indicator Dropdown Logic
   const STATUS_CYCLE = [
     { text: 'Standby', color: '#64748b', border: 'rgba(100,116,139,0.3)', bg: 'rgba(100,116,139,0.1)' },
     { text: 'In Progress', color: 'var(--blue)', border: 'rgba(76,201,240,0.3)', bg: 'rgba(76,201,240,0.1)' },
     { text: 'Active Production', color: '#f72585', border: 'rgba(247,37,133,0.3)', bg: 'rgba(247,37,133,0.1)' },
     { text: 'Ready for Review', color: '#f59e0b', border: 'rgba(245,158,11,0.3)', bg: 'rgba(245,158,11,0.1)' },
+    { text: 'Season 1 Candidate', color: 'var(--green)', border: 'rgba(0,229,160,0.3)', bg: 'rgba(0,229,160,0.1)' },
+    { text: 'Pilot Episode', color: 'var(--blue)', border: 'rgba(76,201,240,0.3)', bg: 'rgba(76,201,240,0.1)' },
     { text: 'Completed', color: 'var(--green)', border: 'rgba(0,229,160,0.3)', bg: 'rgba(0,229,160,0.1)' }
   ];
 
@@ -379,32 +404,55 @@
     const cardId = indicator.closest('.project-card').id;
     if (!cardId) return;
 
-    // Load from local storage
+    const span = indicator.querySelector('span');
+    const defaultText = span.innerText;
+
+    // Create dropdown select
+    const select = document.createElement('select');
+    select.className = 'status-select';
+    
+    STATUS_CYCLE.forEach(status => {
+      const option = document.createElement('option');
+      option.value = status.text;
+      option.innerText = status.text;
+      select.appendChild(option);
+    });
+
+    // Replace span with select
+    indicator.replaceChild(select, span);
+
+    // Stop link navigation when interacting with dropdown
+    indicator.addEventListener('click', e => e.preventDefault());
+    select.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); });
+    
+    // Load from local storage or set default
     const savedStatus = localStorage.getItem('status_' + cardId);
+    let activeStatusData = null;
+    
     if (savedStatus) {
-      const statusData = JSON.parse(savedStatus);
-      applyStatus(indicator, statusData);
+      activeStatusData = JSON.parse(savedStatus);
+      select.value = activeStatusData.text;
+    } else {
+      select.value = defaultText;
+      activeStatusData = STATUS_CYCLE.find(s => s.text === defaultText) || STATUS_CYCLE[0];
     }
+    
+    applyStatus(indicator, select, activeStatusData);
 
-    // Handle click
-    indicator.addEventListener('click', (e) => {
-      e.preventDefault(); // Stop link navigation
+    // Handle change
+    select.addEventListener('change', (e) => {
+      e.preventDefault();
       e.stopPropagation();
-
-      const currentText = indicator.querySelector('span').innerText;
-      let currentIndex = STATUS_CYCLE.findIndex(s => s.text === currentText);
-      
-      let nextIndex = (currentIndex + 1) % STATUS_CYCLE.length;
-      const nextStatus = STATUS_CYCLE[nextIndex];
-
-      applyStatus(indicator, nextStatus);
-      localStorage.setItem('status_' + cardId, JSON.stringify(nextStatus));
+      const selectedStatus = STATUS_CYCLE.find(s => s.text === select.value);
+      applyStatus(indicator, select, selectedStatus);
+      localStorage.setItem('status_' + cardId, JSON.stringify(selectedStatus));
     });
   });
 
-  function applyStatus(indicator, statusData) {
-    indicator.querySelector('span').innerText = statusData.text;
-    indicator.querySelector('span').style.color = statusData.color;
+  function applyStatus(indicator, select, statusData) {
+    if (!statusData) return;
+    indicator.style.color = statusData.color;
+    select.style.color = statusData.color;
     indicator.style.borderColor = statusData.border;
     indicator.style.background = statusData.bg;
     indicator.querySelector('.dot').style.background = statusData.color;

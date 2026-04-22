@@ -129,21 +129,138 @@
   stroke: var(--text2);
   pointer-events: none;
 }
+
+/* ── TELEMETRY PANEL ────────────────────────────────────── */
+.cover-wrapper {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 64px;
+  max-width: 1400px;
+  width: 100%;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .cover-wrapper { grid-template-columns: 1fr; }
+}
+.telemetry-panel {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--glass-shadow);
+}
+.telemetry-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.telemetry-label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blue);
+  opacity: 0.8;
+}
+.progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: var(--bg);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border2);
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--green);
+  box-shadow: 0 0 10px var(--green);
+  transition: width 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.telemetry-stats {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--text);
+}
+.telemetry-list {
+  list-style: none;
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.telemetry-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+}
+.telemetry-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.telemetry-list .count {
+  background: rgba(255,255,255,0.1);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  color: var(--text);
+}
+.telemetry-list .status-tag {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border2);
+}
 </style>
 </head>
 <body>
 
 <div class="cover">
-  <div class="cover-content">
-    <div class="cover-meta">
-      UCM·SCI·CORE <span>/</span> Active Projects <span>/</span> Mission Control
+  <div class="cover-wrapper fade-up">
+    <!-- TELEMETRY PANEL -->
+    <div class="telemetry-panel">
+      <div class="telemetry-block">
+        <div class="telemetry-label">Mission Progress</div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="telemetry-progress-bar" style="width: 0%;"></div>
+        </div>
+        <div class="telemetry-stats" id="telemetry-progress-text">0 / 0 Completed</div>
+      </div>
+      
+      <div class="telemetry-block">
+        <div class="telemetry-label">Cued for Review / Standby</div>
+        <ul class="telemetry-list" id="telemetry-cued-list">
+          <!-- JS injected -->
+        </ul>
+      </div>
+
+      <div class="telemetry-block">
+        <div class="telemetry-label">Research Vector Breakdown</div>
+        <ul class="telemetry-list" id="telemetry-domain-list">
+          <!-- JS injected -->
+        </ul>
+      </div>
     </div>
-    <h1>Photoshoot Concepts<br><em>Command Center</em></h1>
-    <div class="cover-tag"><span class="pulse-dot"></span> Centralized Shoot Intelligence</div>
-    <div class="cover-sub">
-      <div><strong>Division</strong><br>University Communications</div>
-      <div><strong>Role</strong><br>Lead Art Direction</div>
-      <div><strong>Clearance</strong><br>Level 4 (High Visual Impact)</div>
+
+    <!-- MAIN HEADER CONTENT -->
+    <div class="cover-content">
+      <div class="cover-meta">
+        UCM·SCI·CORE <span>/</span> Active Projects <span>/</span> Mission Control
+      </div>
+      <h1>Photoshoot Concepts<br><em>Command Center</em></h1>
+      <div class="cover-tag"><span class="pulse-dot"></span> Centralized Shoot Intelligence</div>
+      <div class="cover-sub">
+        <div><strong>Division</strong><br>University Communications</div>
+        <div><strong>Role</strong><br>Lead Art Direction</div>
+        <div><strong>Clearance</strong><br>Level 4 (High Visual Impact)</div>
+      </div>
     </div>
   </div>
 </div>
@@ -446,6 +563,7 @@
       const selectedStatus = STATUS_CYCLE.find(s => s.text === select.value);
       applyStatus(indicator, select, selectedStatus);
       localStorage.setItem('status_' + cardId, JSON.stringify(selectedStatus));
+      updateTelemetryDashboard();
     });
   });
 
@@ -458,6 +576,71 @@
     indicator.querySelector('.dot').style.background = statusData.color;
     indicator.querySelector('.dot').style.boxShadow = `0 0 10px ${statusData.color}`;
   }
+
+  function updateTelemetryDashboard() {
+    const cards = document.querySelectorAll('.project-card');
+    let total = cards.length;
+    let completed = 0;
+    
+    const domains = {};
+    const cuedItems = [];
+
+    cards.forEach(card => {
+      if (card.id === 'card-template') {
+        total--;
+        return; 
+      }
+
+      const select = card.querySelector('.status-select');
+      const statusText = select ? select.value : '';
+      
+      if (statusText === 'Completed') completed++;
+      if (statusText === 'Standby' || statusText === 'Ready for Review') {
+        const titleEl = card.querySelector('.concept-title');
+        if (titleEl) {
+          cuedItems.push({ title: titleEl.innerText, status: statusText });
+        }
+      }
+
+      const badge = card.querySelector('.concept-type-badge');
+      if (badge) {
+        const domain = badge.innerText.trim();
+        domains[domain] = (domains[domain] || 0) + 1;
+      }
+    });
+
+    const progressFill = document.getElementById('telemetry-progress-bar');
+    const progressText = document.getElementById('telemetry-progress-text');
+    if (progressFill && progressText) {
+      const pct = total === 0 ? 0 : Math.round((completed / total) * 100);
+      progressFill.style.width = pct + '%';
+      progressText.innerHTML = `${completed} / ${total} Completed <span style="opacity:0.5; font-size:11px; float:right;">${pct}%</span>`;
+    }
+
+    const domainList = document.getElementById('telemetry-domain-list');
+    if (domainList) {
+      domainList.innerHTML = '';
+      Object.entries(domains).sort((a,b) => b[1] - a[1]).forEach(([domain, count]) => {
+        domainList.innerHTML += `<li><span>${domain}</span> <span class="count">${count}</span></li>`;
+      });
+    }
+
+    const cuedList = document.getElementById('telemetry-cued-list');
+    if (cuedList) {
+      cuedList.innerHTML = '';
+      if (cuedItems.length === 0) {
+        cuedList.innerHTML = `<li><span style="opacity:0.5">No items cued</span></li>`;
+      } else {
+        cuedItems.slice(0, 4).forEach(item => {
+          let color = item.status === 'Ready for Review' ? '#f59e0b' : '#64748b';
+          cuedList.innerHTML += `<li><span style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width: 160px;" title="${item.title}">${item.title}</span> <span class="status-tag" style="color:${color}; border-color:${color}40;">${item.status}</span></li>`;
+        });
+      }
+    }
+  }
+
+  // Initialize telemetry on load
+  updateTelemetryDashboard();
 
   // Cinematic Scroll & Spotlight Logic
   const observer = new IntersectionObserver((entries) => {
